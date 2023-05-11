@@ -1,0 +1,21 @@
+type: gauge
+entity: sensor.sopfeu_risque_d_incendie_aujourd_hui
+min: 0
+max: 5
+needle: true
+segments:
+  - from: 0
+    color: '#314d9c'
+    label: Bas
+  - from: 1
+    color: '#64b14a'
+    label: Modéré
+  - from: 2
+    color: '#f9cb22'
+    label: Élevé
+  - from: 3
+    color: '#e9892f'
+    label: Très Élevé
+  - from: 4
+    color: '#db2c33'
+    label: Extrême

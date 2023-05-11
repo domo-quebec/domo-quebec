@@ -1,0 +1,17 @@
+- platform: command_line
+  name: SOPFEU Risque d'incendie aujourd'hui
+  unique_id: sopfeu_reg_16_today
+  command: curl -s --request POST "https://sopfeu.qc.ca/wp-content/themes/sopfeu/widget/app/ajax.php" --form media=16 | jq '.indice.danger|tonumber'
+  scan_interval: 3600
+
+- platform: command_line
+  name: SOPFEU Risque d'incendie demain
+  unique_id: sopfeu_reg_16_tomorrow
+  command: curl -s --request POST "https://sopfeu.qc.ca/wp-content/themes/sopfeu/widget/app/ajax.php" --form media=16 | jq '.indice.danger_next|tonumber'
+  scan_interval: 3600
+
+- platform: command_line
+  name: SOPFEU Risque d'incendie après-demain
+  unique_id: sopfeu_reg_16_after_tomorrow
+  command: curl -s --request POST "https://sopfeu.qc.ca/wp-content/themes/sopfeu/widget/app/ajax.php" --form media=16 | jq '.indice.danger_future|tonumber'
+  scan_interval: 3600
