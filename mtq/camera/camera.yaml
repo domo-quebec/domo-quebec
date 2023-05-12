@@ -1,0 +1,4 @@
+camera:
+  - platform: ffmpeg
+    name: "Aut. 15 at boul. de la Seigneurie Ouest"
+    input: https://www.quebec511.info/fr/Diffusion/EtatReseau/camera.ashx?id=3350&format=mp4

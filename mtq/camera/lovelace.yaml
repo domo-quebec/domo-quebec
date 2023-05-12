@@ -1,0 +1,24 @@
+type: vertical-stack
+cards:
+  - show_state: true
+    show_name: true
+    camera_view: auto
+    type: picture-entity
+    entity: camera.aut_15_at_boul_de_la_seigneurie_ouest
+    camera_image: camera.aut_15_at_boul_de_la_seigneurie_ouest
+  - type: horizontal-stack
+    cards:
+      - type: picture
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: >-
+          https://www.quebec511.info/Images/Cameras/Montreal/fixes/fr/0155249_1.jpg
+      - type: picture
+        tap_action:
+          action: none
+        hold_action:
+          action: none
+        image: >-
+          https://www.quebec511.info/Images/Cameras/Montreal/fixes/fr/0155249_2.jpg
