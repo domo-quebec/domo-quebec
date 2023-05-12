@@ -6,7 +6,7 @@ Une option visuelle du risque d'incendie founi par la SOPFEU.
 
 - Installer [Swiss Army Knife](https://swiss-army-knife-card-manual.amoebelabs.com/start/installation/).
 - Ajouter les sensors.
-- Copier le template dans le répertoire ###/config/lovelace/sak_templates/templates/layouts/
+- Copier le template dans le répertoire /config/lovelace/sak_templates/templates/layouts/
 - Redémarrer Home Assistant
 
 ### Captures d'écran
