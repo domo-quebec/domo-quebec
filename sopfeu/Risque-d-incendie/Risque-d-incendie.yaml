@@ -1,4 +1,4 @@
-# Vue Météo
+# Risques d'incendie
   - type: custom:swiss-army-knife-card
     entities:
       - entity: sensor.sopfeu_risque_d_incendie_aujourd_hui
