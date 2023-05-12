@@ -6,8 +6,8 @@ Ce dépôt a pour but de documenter l'accès à différentes ressources d'intér
 
 | Plateforme | Description | État |
 |-|-|-|
-|Sopfeu | Indice de danger d'incendie |Fonctionnel|
-|Hydro-Québec | Données Ouvertes | Fonctionnel |
+| Sopfeu | Indice de danger d'incendie |Fonctionnel|
+| Hydro-Québec | Données Ouvertes | Fonctionnel |
 | MSSS | Occupation Urgences | En cours |
 | CAA | Prix Essence | En cours |
 
