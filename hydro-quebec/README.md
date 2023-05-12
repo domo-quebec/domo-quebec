@@ -7,3 +7,7 @@ Il y a tout de même certaines données plus globales publiées par Hydro-Québe
 ## Demande de puissance du réseau
 
 La demande de puissance du réseau d'Hydro-Québec est disponible a l'adresse suivante et est rafraichi aux 15 min [https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/demande.json](https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/demande.json)
+
+![Demande de puissance](demande%20de%20puissance/demande-puissance.png)
+
+Merci riceandpasta#2144 sur le [Discord](https://discord.gg/BTPDntfaXH) du projet [Hydroqc](https://hydroqc.ca) pour la configuration initiale. BTPDntfaXH
