@@ -10,4 +10,4 @@ Il est possible de les ajouter à Home-Assistant.
 
 ## TODO
 
-- Ajoutées
+- Ajoutées autres données du MTQ

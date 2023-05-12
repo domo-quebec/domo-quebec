@@ -10,4 +10,4 @@ La demande de puissance du réseau d'Hydro-Québec est disponible a l'adresse su
 
 ![Demande de puissance](demande%20de%20puissance/demande-puissance.png)
 
-Merci riceandpasta#2144 sur le [Discord](https://discord.gg/BTPDntfaXH) du projet [Hydroqc](https://hydroqc.ca) pour la configuration initiale. BTPDntfaXH
+Merci riceandpasta#2144 sur le [Discord](https://discord.gg/BTPDntfaXH) du projet [Hydroqc](https://hydroqc.ca) pour la configuration initiale.
