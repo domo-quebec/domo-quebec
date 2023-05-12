@@ -1,31 +1,16 @@
-# ThermostatAndAC Blueprint
+# Risque d'incendie en images
 
-## Installation of this Blueprint
+Une option visuelle du risque d'incendie founi par la SOPFEU.
 
-- Install simple-thermostat from HACS
+## Installation
 
-- Copy the content of the Blueprint.yaml file into the Blueprint YAML code.
+- Installer [Swiss Army Knife](https://swiss-army-knife-card-manual.amoebelabs.com/start/installation/).
+- Ajouter les sensors.
+- Copier le template dans le répertoire ###/config/lovelace/sak_templates/templates/layouts/
+- Redémarrer Home Assistant
 
- ## Fields to defines.
- - The Thermostat\AC name
- - The thermostat\Ac entity
- - Show or hide Controls buttons
- - Show or hide Controls names (1)
- - Show or hide Controls icons (1)
- - Additional sensor name
- - Additional sensor entity
+### Captures d'écran
 
-(1) These parameters are used only if the control buttons are displayed.
+![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/6c5b1363-d340-499c-9526-cea0ab8b036c)
 
-### Screenshots
-**Light theme:**<br>
-
-![image](https://user-images.githubusercontent.com/83040228/164934551-4d9b84ae-c46a-4ab6-b6a1-b24f397f2da5.jpeg)
-
-**Dark theme:**<br>
-
-![image](https://user-images.githubusercontent.com/83040228/164934556-4ca11a87-bd4b-4e32-b307-41315969a1ad.jpeg)
-
-### Changelog
-#### 1.0
-- First release
+![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/e6b2d293-afa7-4fd9-9359-1cf5e98e062a)
