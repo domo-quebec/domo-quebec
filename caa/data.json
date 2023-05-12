@@ -1,0 +1,828 @@
+{
+    "today": {
+        "MONTREAL": "165.2",
+        "ALMA": "157.9",
+        "BLAINVILLE": "158.8",
+        "BROSSARD": "161.9",
+        "CHICOUTIMI": "145.1",
+        "DRUMMONDVILLE": "163.9",
+        "GASPE": "168.7",
+        "GATINEAU": "150.9",
+        "GRANBY": "167.0",
+        "LAVAL": "159.6",
+        "LEVIS": "167.6",
+        "LONGUEUIL": "165.9",
+        "MAGOG": "158.9",
+        "MATANE": "171.9",
+        "QUEBEC": "169.5",
+        "REPENTIGNY": "161.2",
+        "RIMOUSKI": "173.9",
+        "RIVIERE-DU-LOUP": "173.9",
+        "ROUYN-NORANDA": "162.4",
+        "SAINT-EUSTACHE": "164.9",
+        "SAINT-HYACINTHE": "150.9",
+        "SAINT-JEAN-SUR-RICHELIEU": "155.6",
+        "SAINT-JEROME": "160.5",
+        "SEPT-ILES": "175.2",
+        "SHAWINIGAN": "158.1",
+        "SHERBROOKE": "164.4",
+        "TROIS-RIVIERES": "167.2",
+        "VAL-D'OR": "161.1",
+        "VAUDREUIL-DORION": "156.5"
+    },
+    "yesterday": {
+        "MONTREAL": "161.5",
+        "ALMA": "157.9",
+        "BLAINVILLE": "160.9",
+        "BROSSARD": "161.0",
+        "CHICOUTIMI": "145.4",
+        "DRUMMONDVILLE": "163.9",
+        "GASPE": "167.6",
+        "GATINEAU": "152.6",
+        "GRANBY": "167.0",
+        "LAVAL": "159.3",
+        "LEVIS": "167.6",
+        "LONGUEUIL": "163.9",
+        "MAGOG": "158.9",
+        "MATANE": "171.9",
+        "QUEBEC": "170.2",
+        "REPENTIGNY": "160.0",
+        "RIMOUSKI": "173.9",
+        "RIVIERE-DU-LOUP": "174.1",
+        "ROUYN-NORANDA": "161.1",
+        "SAINT-EUSTACHE": "157.8",
+        "SAINT-HYACINTHE": "151.9",
+        "SAINT-JEAN-SUR-RICHELIEU": "156.9",
+        "SAINT-JEROME": "160.6",
+        "SEPT-ILES": "175.0",
+        "SHAWINIGAN": "158.6",
+        "SHERBROOKE": "164.8",
+        "TROIS-RIVIERES": "167.2",
+        "VAL-D'OR": "161.3",
+        "VAUDREUIL-DORION": "157.9"
+    },
+    "last_week": {
+        "MONTREAL": "164.8",
+        "ALMA": "158.2",
+        "BLAINVILLE": "162.9",
+        "BROSSARD": "166.9",
+        "CHICOUTIMI": "151.4",
+        "DRUMMONDVILLE": "163.9",
+        "GASPE": "176.6",
+        "GATINEAU": "156.1",
+        "GRANBY": "167.0",
+        "LAVAL": "160.6",
+        "LEVIS": "171.3",
+        "LONGUEUIL": "162.9",
+        "MAGOG": "159.0",
+        "MATANE": "175.9",
+        "QUEBEC": "173.9",
+        "REPENTIGNY": "164.7",
+        "RIMOUSKI": "173.9",
+        "RIVIERE-DU-LOUP": "174.1",
+        "ROUYN-NORANDA": "160.9",
+        "SAINT-EUSTACHE": "160.4",
+        "SAINT-HYACINTHE": "156.9",
+        "SAINT-JEAN-SUR-RICHELIEU": "161.2",
+        "SAINT-JEROME": "162.6",
+        "SEPT-ILES": "176.2",
+        "SHAWINIGAN": "161.2",
+        "SHERBROOKE": "165.2",
+        "TROIS-RIVIERES": "174.0",
+        "VAL-D'OR": "161.2",
+        "VAUDREUIL-DORION": "160.9"
+    },
+    "last_month": {
+        "MONTREAL": "167.4",
+        "ALMA": "155.9",
+        "BLAINVILLE": "161.9",
+        "BROSSARD": "163.9",
+        "CHICOUTIMI": "148.5",
+        "DRUMMONDVILLE": "159.0",
+        "GASPE": "169.6",
+        "GATINEAU": "148.6",
+        "GRANBY": "157.9",
+        "LAVAL": "165.5",
+        "LEVIS": "167.1",
+        "LONGUEUIL": "169.9",
+        "MAGOG": "157.9",
+        "MATANE": "163.9",
+        "QUEBEC": "167.9",
+        "REPENTIGNY": "165.1",
+        "RIMOUSKI": "168.9",
+        "RIVIERE-DU-LOUP": "168.9",
+        "ROUYN-NORANDA": "160.9",
+        "SAINT-EUSTACHE": "167.9",
+        "SAINT-HYACINTHE": "152.9",
+        "SAINT-JEAN-SUR-RICHELIEU": "155.1",
+        "SAINT-JEROME": "157.2",
+        "SEPT-ILES": "168.9",
+        "SHAWINIGAN": "159.6",
+        "SHERBROOKE": "152.9",
+        "TROIS-RIVIERES": "169.4",
+        "VAL-D'OR": "161.3",
+        "VAUDREUIL-DORION": "159.9"
+    },
+    "last_year": {
+        "MONTREAL": "203.9",
+        "ALMA": "198.9",
+        "BLAINVILLE": "199.9",
+        "BROSSARD": "204.9",
+        "CHICOUTIMI": "197.4",
+        "DRUMMONDVILLE": "205.9",
+        "GASPE": "226.1",
+        "GATINEAU": "202.9",
+        "GRANBY": "205.9",
+        "LAVAL": "203.2",
+        "LEVIS": "203.7",
+        "LONGUEUIL": "204.9",
+        "MAGOG": "205.9",
+        "MATANE": "206.9",
+        "QUEBEC": "205.9",
+        "REPENTIGNY": "204.5",
+        "RIMOUSKI": "204.8",
+        "RIVIERE-DU-LOUP": "207.3",
+        "ROUYN-NORANDA": "204.2",
+        "SAINT-EUSTACHE": "199.9",
+        "SAINT-HYACINTHE": "204.7",
+        "SAINT-JEAN-SUR-RICHELIEU": "201.7",
+        "SAINT-JEROME": "204.8",
+        "SEPT-ILES": "204.9",
+        "SHAWINIGAN": "205.2",
+        "SHERBROOKE": "205.3",
+        "TROIS-RIVIERES": "205.2",
+        "VAL-D'OR": "204.3",
+        "VAUDREUIL-DORION": "203.1"
+    },
+    "arrow": {
+        "MONTREAL": "up",
+        "ALMA": "equal",
+        "BLAINVILLE": "down",
+        "BROSSARD": "up",
+        "CHICOUTIMI": "down",
+        "DRUMMONDVILLE": "equal",
+        "GASPE": "up",
+        "GATINEAU": "down",
+        "GRANBY": "equal",
+        "LAVAL": "up",
+        "LEVIS": "equal",
+        "LONGUEUIL": "up",
+        "MAGOG": "equal",
+        "MATANE": "equal",
+        "QUEBEC": "down",
+        "REPENTIGNY": "up",
+        "RIMOUSKI": "equal",
+        "RIVIERE-DU-LOUP": "down",
+        "ROUYN-NORANDA": "up",
+        "SAINT-EUSTACHE": "up",
+        "SAINT-HYACINTHE": "down",
+        "SAINT-JEAN-SUR-RICHELIEU": "down",
+        "SAINT-JEROME": "down",
+        "SEPT-ILES": "up",
+        "SHAWINIGAN": "down",
+        "SHERBROOKE": "down",
+        "TROIS-RIVIERES": "equal",
+        "VAL-D'OR": "down",
+        "VAUDREUIL-DORION": "down"
+    },
+    "history": {
+        "MONTREAL": {
+            "month": {
+                "min": {
+                    "price": "159.5",
+                    "date": "5/6/2023"
+                },
+                "max": {
+                    "price": "174.1",
+                    "date": "4/20/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "144.7",
+                    "date": "12/14/2022"
+                },
+                "max": {
+                    "price": "224.0",
+                    "date": "6/7/2022"
+                }
+            }
+        },
+        "ALMA": {
+            "month": {
+                "min": {
+                    "price": "154.9",
+                    "date": "4/16/2023"
+                },
+                "max": {
+                    "price": "167.1",
+                    "date": "4/25/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "147.9",
+                    "date": "12/11/2022"
+                },
+                "max": {
+                    "price": "219.2",
+                    "date": "6/9/2022"
+                }
+            }
+        },
+        "BLAINVILLE": {
+            "month": {
+                "min": {
+                    "price": "158.8",
+                    "date": "5/12/2023"
+                },
+                "max": {
+                    "price": "172.3",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "143.9",
+                    "date": "12/14/2022"
+                },
+                "max": {
+                    "price": "224.4",
+                    "date": "6/12/2022"
+                }
+            }
+        },
+        "BROSSARD": {
+            "month": {
+                "min": {
+                    "price": "153.9",
+                    "date": "5/7/2023"
+                },
+                "max": {
+                    "price": "171.9",
+                    "date": "4/22/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "137.2",
+                    "date": "12/14/2022"
+                },
+                "max": {
+                    "price": "225.9",
+                    "date": "6/7/2022"
+                }
+            }
+        },
+        "CHICOUTIMI": {
+            "month": {
+                "min": {
+                    "price": "145.1",
+                    "date": "5/12/2023"
+                },
+                "max": {
+                    "price": "164.8",
+                    "date": "4/22/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "138.1",
+                    "date": "12/17/2022"
+                },
+                "max": {
+                    "price": "219.5",
+                    "date": "6/9/2022"
+                }
+            }
+        },
+        "DRUMMONDVILLE": {
+            "month": {
+                "min": {
+                    "price": "152.5",
+                    "date": "4/15/2023"
+                },
+                "max": {
+                    "price": "171.9",
+                    "date": "4/19/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "144.9",
+                    "date": "12/17/2022"
+                },
+                "max": {
+                    "price": "223.9",
+                    "date": "6/7/2022"
+                }
+            }
+        },
+        "GASPE": {
+            "month": {
+                "min": {
+                    "price": "164.9",
+                    "date": "5/7/2023"
+                },
+                "max": {
+                    "price": "176.9",
+                    "date": "4/24/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "151.9",
+                    "date": "12/13/2022"
+                },
+                "max": {
+                    "price": "226.7",
+                    "date": "6/15/2022"
+                }
+            }
+        },
+        "GATINEAU": {
+            "month": {
+                "min": {
+                    "price": "147.3",
+                    "date": "4/13/2023"
+                },
+                "max": {
+                    "price": "170.1",
+                    "date": "4/25/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "130.6",
+                    "date": "12/21/2022"
+                },
+                "max": {
+                    "price": "215.9",
+                    "date": "6/8/2022"
+                }
+            }
+        },
+        "GRANBY": {
+            "month": {
+                "min": {
+                    "price": "156.9",
+                    "date": "4/13/2023"
+                },
+                "max": {
+                    "price": "168.7",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "149.0",
+                    "date": "12/20/2022"
+                },
+                "max": {
+                    "price": "223.9",
+                    "date": "6/5/2022"
+                }
+            }
+        },
+        "LAVAL": {
+            "month": {
+                "min": {
+                    "price": "158.4",
+                    "date": "5/7/2023"
+                },
+                "max": {
+                    "price": "172.9",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "144.7",
+                    "date": "12/14/2022"
+                },
+                "max": {
+                    "price": "222.2",
+                    "date": "6/11/2022"
+                }
+            }
+        },
+        "LEVIS": {
+            "month": {
+                "min": {
+                    "price": "152.4",
+                    "date": "4/16/2023"
+                },
+                "max": {
+                    "price": "174.9",
+                    "date": "4/28/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "139.9",
+                    "date": "1/3/2023"
+                },
+                "max": {
+                    "price": "223.9",
+                    "date": "6/8/2022"
+                }
+            }
+        },
+        "LONGUEUIL": {
+            "month": {
+                "min": {
+                    "price": "156.9",
+                    "date": "5/7/2023"
+                },
+                "max": {
+                    "price": "175.9",
+                    "date": "4/20/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "144.8",
+                    "date": "12/16/2022"
+                },
+                "max": {
+                    "price": "226.9",
+                    "date": "6/11/2022"
+                }
+            }
+        },
+        "MAGOG": {
+            "month": {
+                "min": {
+                    "price": "157.9",
+                    "date": "4/13/2023"
+                },
+                "max": {
+                    "price": "163.1",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "143.9",
+                    "date": "1/2/2023"
+                },
+                "max": {
+                    "price": "223.9",
+                    "date": "6/9/2022"
+                }
+            }
+        },
+        "MATANE": {
+            "month": {
+                "min": {
+                    "price": "163.9",
+                    "date": "4/14/2023"
+                },
+                "max": {
+                    "price": "176.1",
+                    "date": "4/23/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "148.9",
+                    "date": "12/17/2022"
+                },
+                "max": {
+                    "price": "226.5",
+                    "date": "6/8/2022"
+                }
+            }
+        },
+        "QUEBEC": {
+            "month": {
+                "min": {
+                    "price": "159.9",
+                    "date": "5/9/2023"
+                },
+                "max": {
+                    "price": "176.9",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "145.0",
+                    "date": "12/13/2022"
+                },
+                "max": {
+                    "price": "224.0",
+                    "date": "6/15/2022"
+                }
+            }
+        },
+        "REPENTIGNY": {
+            "month": {
+                "min": {
+                    "price": "160.0",
+                    "date": "5/9/2023"
+                },
+                "max": {
+                    "price": "172.1",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "143.9",
+                    "date": "12/22/2022"
+                },
+                "max": {
+                    "price": "223.5",
+                    "date": "6/8/2022"
+                }
+            }
+        },
+        "RIMOUSKI": {
+            "month": {
+                "min": {
+                    "price": "168.9",
+                    "date": "4/13/2023"
+                },
+                "max": {
+                    "price": "176.1",
+                    "date": "4/22/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "153.9",
+                    "date": "12/13/2022"
+                },
+                "max": {
+                    "price": "230.5",
+                    "date": "6/13/2022"
+                }
+            }
+        },
+        "RIVIERE-DU-LOUP": {
+            "month": {
+                "min": {
+                    "price": "168.9",
+                    "date": "4/14/2023"
+                },
+                "max": {
+                    "price": "175.9",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "153.3",
+                    "date": "12/17/2022"
+                },
+                "max": {
+                    "price": "226.4",
+                    "date": "6/18/2022"
+                }
+            }
+        },
+        "ROUYN-NORANDA": {
+            "month": {
+                "min": {
+                    "price": "160.9",
+                    "date": "5/5/2023"
+                },
+                "max": {
+                    "price": "172.7",
+                    "date": "4/23/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "153.9",
+                    "date": "12/13/2022"
+                },
+                "max": {
+                    "price": "226.2",
+                    "date": "6/13/2022"
+                }
+            }
+        },
+        "SAINT-EUSTACHE": {
+            "month": {
+                "min": {
+                    "price": "157.7",
+                    "date": "5/9/2023"
+                },
+                "max": {
+                    "price": "176.9",
+                    "date": "4/19/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "143.6",
+                    "date": "12/18/2022"
+                },
+                "max": {
+                    "price": "224.9",
+                    "date": "6/11/2022"
+                }
+            }
+        },
+        "SAINT-HYACINTHE": {
+            "month": {
+                "min": {
+                    "price": "150.9",
+                    "date": "5/12/2023"
+                },
+                "max": {
+                    "price": "169.9",
+                    "date": "4/20/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "146.1",
+                    "date": "3/28/2023"
+                },
+                "max": {
+                    "price": "223.9",
+                    "date": "6/8/2022"
+                }
+            }
+        },
+        "SAINT-JEAN-SUR-RICHELIEU": {
+            "month": {
+                "min": {
+                    "price": "153.9",
+                    "date": "5/9/2023"
+                },
+                "max": {
+                    "price": "164.4",
+                    "date": "4/20/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "136.9",
+                    "date": "12/13/2022"
+                },
+                "max": {
+                    "price": "220.2",
+                    "date": "6/9/2022"
+                }
+            }
+        },
+        "SAINT-JEROME": {
+            "month": {
+                "min": {
+                    "price": "156.5",
+                    "date": "4/16/2023"
+                },
+                "max": {
+                    "price": "172.9",
+                    "date": "4/20/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "145.0",
+                    "date": "1/3/2023"
+                },
+                "max": {
+                    "price": "223.9",
+                    "date": "6/9/2022"
+                }
+            }
+        },
+        "SEPT-ILES": {
+            "month": {
+                "min": {
+                    "price": "168.9",
+                    "date": "4/13/2023"
+                },
+                "max": {
+                    "price": "176.4",
+                    "date": "5/1/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "153.5",
+                    "date": "12/28/2022"
+                },
+                "max": {
+                    "price": "220.8",
+                    "date": "6/8/2022"
+                }
+            }
+        },
+        "SHAWINIGAN": {
+            "month": {
+                "min": {
+                    "price": "158.1",
+                    "date": "5/10/2023"
+                },
+                "max": {
+                    "price": "166.7",
+                    "date": "4/22/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "144.9",
+                    "date": "12/24/2022"
+                },
+                "max": {
+                    "price": "223.4",
+                    "date": "6/10/2022"
+                }
+            }
+        },
+        "SHERBROOKE": {
+            "month": {
+                "min": {
+                    "price": "158.9",
+                    "date": "5/9/2023"
+                },
+                "max": {
+                    "price": "168.8",
+                    "date": "4/27/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "151.9",
+                    "date": "1/10/2023"
+                },
+                "max": {
+                    "price": "224.0",
+                    "date": "6/10/2022"
+                }
+            }
+        },
+        "TROIS-RIVIERES": {
+            "month": {
+                "min": {
+                    "price": "152.8",
+                    "date": "4/13/2023"
+                },
+                "max": {
+                    "price": "176.4",
+                    "date": "4/22/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "145.7",
+                    "date": "12/20/2022"
+                },
+                "max": {
+                    "price": "224.2",
+                    "date": "6/14/2022"
+                }
+            }
+        },
+        "VAL-D'OR": {
+            "month": {
+                "min": {
+                    "price": "160.9",
+                    "date": "5/8/2023"
+                },
+                "max": {
+                    "price": "171.1",
+                    "date": "4/22/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "150.9",
+                    "date": "12/25/2022"
+                },
+                "max": {
+                    "price": "226.2",
+                    "date": "6/9/2022"
+                }
+            }
+        },
+        "VAUDREUIL-DORION": {
+            "month": {
+                "min": {
+                    "price": "155.8",
+                    "date": "4/14/2023"
+                },
+                "max": {
+                    "price": "171.9",
+                    "date": "4/21/2023"
+                }
+            },
+            "year": {
+                "min": {
+                    "price": "139.9",
+                    "date": "12/11/2022"
+                },
+                "max": {
+                    "price": "225.9",
+                    "date": "6/11/2022"
+                }
+            }
+        }
+    }
+}

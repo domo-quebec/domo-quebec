@@ -1,0 +1,17 @@
+type: custom:mini-graph-card
+entities:
+  - sensor.demande_de_puissance_reseau_hydro_quebec
+hours_to_show: 18
+points_per_hour: 4
+animate: true
+line_width: 3
+show:
+  extrema: true
+  fill: fade
+color_thresholds:
+  - value: 20000
+    color: '#2596be'
+  - color: '#49be25'
+  - color: '#bea925'
+  - value: 40000
+    color: '#be4d25'
