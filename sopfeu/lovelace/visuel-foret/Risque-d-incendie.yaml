@@ -1,0 +1,15 @@
+# Risques d'incendie
+  - type: custom:swiss-army-knife-card
+    entities:
+      - entity: sensor.sopfeu_risque_d_incendie_aujourd_hui
+        name: "Aujourd'hui"
+        icon: mdi:pine-tree-fire
+      - entity: sensor.sopfeu_risque_d_incendie_demain
+        name: "Demain"
+        - entity: sensor.sopfeu_risque_d_incendie_apres_demain
+          name: "Après-demain"
+    layout:
+      template:
+        name: sak_layout_mjt_risque_incendie
+          variables:
+            - dummy: "dummy"
