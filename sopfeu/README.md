@@ -21,9 +21,18 @@ Les valeurs du fichier [sensors.yaml](sensors.yaml) doivent être ajouté à vot
 
 ### Interface lovelace
 
-Ajoutez la configuration du fichier [lovelace.yaml](lovelace.yaml) dans votre configuration afin d'avoir une jauge fidèles aux couleurs et termes de la SOPFEU.
+Sous le dossier lovelace vous trouverez deux visualisation à ajouter à votre configuration.
 
-![Jauge SOPFEU](sopfeu-gauge.png)
+#### Jauge
+
+![Jauge SOPFEU](lovelace/jauge/sopfeu-gauge.png)
+
+#### Visuel Forêt
+
+
+[<img src="lovelace/visuel-foret/foret1.jpeg" width="500"/>](lovelace/visuel-foret/foret1.jpeg)
+
+[<img src="lovelace/visuel-foret/foret2.jpeg" width="500"/>](lovelace/visuel-foret/foret2.jpeg)
 
 ## Liste de valeur "media" (Région SOPFEU)
 

@@ -1,10 +1,10 @@
 sak_layout_mjt_risque_incendie:
   template:
     type: layout
-    defaults: 
+    defaults:
       - dummy: 0
   layout:
-  
+
           aspectratio: 6/2
           toolsets:
             # ================================================================
@@ -132,7 +132,7 @@ sak_layout_mjt_risque_incendie:
                         image: >
                           [[[
                             return (state);
-                          ]]] 
+                          ]]]
                 # ------------------------------------------------------------
                 - type: state
                   position:
@@ -196,7 +196,7 @@ sak_layout_mjt_risque_incendie:
                         image: >
                           [[[
                             return (state);
-                          ]]] 
+                          ]]]
                 # ------------------------------------------------------------
                 - type: state
                   position:
@@ -260,7 +260,7 @@ sak_layout_mjt_risque_incendie:
                         image: >
                           [[[
                             return (state);
-                          ]]] 
+                          ]]]
                 # ------------------------------------------------------------
                 - type: state
                   position:
@@ -285,5 +285,3 @@ sak_layout_mjt_risque_incendie:
                           if (state === '5') return('Extrême');
                           return "?";
                         ]]]
-                        
-                        

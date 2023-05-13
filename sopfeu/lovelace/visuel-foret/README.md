@@ -13,6 +13,8 @@ Une option visuelle du risque d'incendie founi par la SOPFEU.
 
 ### Captures d'écran
 
-![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/6c5b1363-d340-499c-9526-cea0ab8b036c)
+![image](foret1.jpeg)
 
-![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/e6b2d293-afa7-4fd9-9359-1cf5e98e062a)
+![image](foret2.jpeg)
+
+Crédit : [https://github.com/MichelJourdain/](https://github.com/MichelJourdain/)
