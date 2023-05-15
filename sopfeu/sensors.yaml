@@ -7,21 +7,21 @@ sensor:
 
 template:
   - sensor:
-    - name: SOPFEU Risque d'incendie aujourd'hui
+    - name: "SOPFEU Risque d'incendie aujourd'hui"
       unique_id: sopfeu_reg_16_today
       icon: mdi:pine-tree-fire
       state: >
         {% set sopfeu_data = states('sensor.sopfeu_data')|from_json %}
         {{ sopfeu_data.indice.danger }}
 
-    - name: SOPFEU Risque d'incendie demain
+    - name: "SOPFEU Risque d'incendie demain"
       unique_id: sopfeu_reg_16_tomorrow
       icon: mdi:pine-tree-fire
       state: >
         {% set sopfeu_data = states('sensor.sopfeu_data')|from_json %}
         {{ sopfeu_data.indice.danger_next }}
 
-    - name: SOPFEU Risque d'incendie après-demain
+    - name: "SOPFEU Risque d'incendie après-demain"
       unique_id: sopfeu_reg_16_after_tomorrow
       icon: mdi:pine-tree-fire
       state: >
