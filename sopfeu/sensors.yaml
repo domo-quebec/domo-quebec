@@ -1,4 +1,4 @@
-sensors:
+sensor:
   - platform: command_line
     name: SOPFEU Data
     unique_id: sopfeu_reg_16
@@ -6,7 +6,7 @@ sensors:
     scan_interval: 3600
 
 template:
-  - sensors:
+  - sensor:
     - name: SOPFEU Risque d'incendie aujourd'hui
       unique_id: sopfeu_reg_16_today
       icon: mdi:pine-tree-fire
