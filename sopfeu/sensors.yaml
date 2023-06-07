@@ -1,4 +1,4 @@
-sensors:
+sensor:
   - platform: rest
     resource: "https://cartes.sopfeu.qc.ca/fires?filterChoice=active"
     name: "SOPFEU Feux Actifs data"
@@ -28,33 +28,35 @@ sensors:
       - updatedAt
     scan_interval: 1800
   
-  - name: "SOPFEU Risque d'incendie demain"
-    unique_id: sopfeu_risque_16_tomorrow
-    icon: mdi:pine-tree-fire
-    state: >
-      {{ states.sensor.sopfeu_risque_d_incendie_actuel.attributes.riskTomorrow }}
-  
-  - name: "SOPFEU Risque d'incendie après-demain"
-    unique_id: sopfeu_risque_16_after_tomorrow
-    icon: mdi:pine-tree-fire
-    state: >
-      {{ states.sensor.sopfeu_risque_d_incendie_actuel.attributes.riskAfterTomorrow }}
-  
-  - name: "SOPFEU Feux actifs au Québec"
-    unique_id: sopfeu_feux_actifs_total
-    state: >
-      {{ states.sensor.sopfeu_feux_actifs_data.attributes.fires | selectattr('state.id', 'in', [5, 4, 3]) | list | length }}
-  
-  - name: "SOPFEU Feux actifs secteur"
-    unique_id: sopfeu_feux_actifs_secteur
-    state: >
-      {% set fires = states.sensor.sopfeu_feux_actifs_data.attributes.fires %}
-      {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('managementUnitId', '==', 151) | list %}
-      {{ filtered_fires | length }}
-  
-  - name: "SOPFEU Feux actifs MRC"
-    unique_id: sopfeu_feux_actifs_mrc
-    state: >
-      {% set fires = states.sensor.sopfeu_feux_actifs_data.attributes.fires %}
-      {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('mrcId', '==', 78) | list %}
-      {{ filtered_fires | length }}
+template:
+  - sensor:
+    - name: "SOPFEU Risque d'incendie demain"
+      unique_id: sopfeu_risque_16_tomorrow
+      icon: mdi:pine-tree-fire
+      state: >
+        {{ states.sensor.sopfeu_risque_d_incendie_actuel.attributes.riskTomorrow }}
+
+    - name: "SOPFEU Risque d'incendie après-demain"
+      unique_id: sopfeu_risque_16_after_tomorrow
+      icon: mdi:pine-tree-fire
+      state: >
+        {{ states.sensor.sopfeu_risque_d_incendie_actuel.attributes.riskAfterTomorrow }}
+
+    - name: "SOPFEU Feux actifs au Québec"
+      unique_id: sopfeu_feux_actifs_total
+      state: >
+        {{ states.sensor.sopfeu_feux_actifs_data.attributes.fires | selectattr('state.id', 'in', [5, 4, 3]) | list | length }}
+
+    - name: "SOPFEU Feux actifs secteur"
+      unique_id: sopfeu_feux_actifs_secteur
+      state: >
+        {% set fires = states.sensor.sopfeu_feux_actifs_data.attributes.fires %}
+        {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('managementUnitId', '==', 151) | list %}
+        {{ filtered_fires | length }}
+
+    - name: "SOPFEU Feux actifs MRC"
+      unique_id: sopfeu_feux_actifs_mrc
+      state: >
+        {% set fires = states.sensor.sopfeu_feux_actifs_data.attributes.fires %}
+        {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('mrcId', '==', 78) | list %}
+        {{ filtered_fires | length }}
