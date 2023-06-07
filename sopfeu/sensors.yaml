@@ -179,7 +179,7 @@ template:
       icon: mdi:pine-tree-fire
       state: >
         {% set fires = state_attr('sensor.sopfeu_feux_actifs_data', 'fires') %}
-        {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('mrcId', '==', 77) | list %}
+        {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('mrcId', '==', 78) | list %}
         {{ filtered_fires | length | int}}
       attributes:
         attribution: Données fournies par la SOPFEU
