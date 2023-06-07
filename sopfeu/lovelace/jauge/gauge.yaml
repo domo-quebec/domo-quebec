@@ -1,5 +1,5 @@
 type: gauge
-entity: sensor.sopfeu_risque_d_incendie_aujourd_hui
+entity: sensor.sopfeu_risque_d_incendie_actuel
 min: -0.5
 max: 5.5
 needle: true

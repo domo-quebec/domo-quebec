@@ -1,0 +1,42 @@
+<i><sub>MÀJ: {{ states.sensor.sopfeu_feux_actifs_data.attributes.updatedAt.0.max | as_timestamp|timestamp_custom() }}</sub></i>
+
+**Total au Québec: {{ states('sensor.sopfeu_feux_actifs_au_quebec') }}**
+
+**Feux de forêts MRC: {{ states('sensor.sopfeu_feux_actifs_mrc') }}**
+{% if states('sensor.sopfeu_feux_actifs_mrc')|int > 0 %}
+  {% for fire in states.sensor.sopfeu_feux_actifs_data.attributes.fires|sort(attribute='begin_at')|reverse -%}
+    {% if fire.mrc.id == 78 -%}
+<details>
+<summary>
+**FEU {{ fire.num }}**<br>
+Début: {{ as_timestamp(fire.begin_at)| timestamp_custom }}<br>
+Condition: {{ fire.state.name }}<br>
+</summary>
+<br>
+Cause: {{ fire.origin.name }}
+Superficie: {{ fire.surface }} Hectares
+[{{ fire.lat}} {{ fire.lng }}](https://www.openstreetmap.org/?mlat={{ fire.lat -}}&mlon={{ fire.lng -}}#map=9/{{ fire.lat }}/{{ fire.lng }})
+</details>
+    {% endif -%}
+  {% endfor %}
+{% endif %}
+**Feux de forêts secteur Laurentides: {{ states('sensor.sopfeu_feux_actifs_secteur') }}**
+{% if states('sensor.sopfeu_feux_actifs_secteur')|int > 0 -%}
+  {% for fire in states.sensor.sopfeu_feux_actifs_data.attributes.fires|sort(attribute='begin_at')|reverse -%}
+    {% if fire.managementUnitId == 151 and fire.mrc.id != 78 %}
+<details>
+<summary>
+FEU {{ fire.num }}<br>
+Début: {{ as_timestamp(fire.begin_at)| timestamp_custom }}<br>
+MRC: {{ fire.mrc.name }}<br>
+Condition: {{ fire.state.name }}<br>
+</summary>
+Cause: {{ fire.origin.name }}<br>
+Superficie: {{ fire.surface | round(2)}} Hectares<br>
+Secteur: {{ fire.managementUnit.name }}<br>
+<a href="https://www.openstreetmap.org/?mlat={{ fire.lat -}}&mlon={{ fire.lng -}}#map=9/{{ fire.lat }}/{{ fire.lng }}">{{ fire.lat }}, {{ fire.lng }}</a>
+</details>
+<br>
+    {% endif -%}
+  {% endfor -%}
+{% endif -%}
