@@ -11,8 +11,8 @@ sensor:
 
   - platform: rest
     resource: "https://cartes.sopfeu.qc.ca/risk-zones"
-    name: "SOPFEU Risque d'incendie actuel"
-    unique_id: SOPFEU_risque_16_now
+    name: SOPFEU Risque d'incendie data
+    unique_id: SOPFEU_risque_16_data
     value_template: >
       {% set json_content = value_json %}
         {% for item in json_content %}
@@ -30,33 +30,191 @@ sensor:
   
 template:
   - sensor:
+    - name: "SOPFEU Risque d'incendie actuel"
+      unique_id: sopfeu_risque_16_now
+      icon: mdi:fire-alert
+      state: >
+        {{ states('sensor.sopfeu_risque_d_incendie_data') }}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+
+    - name: "SOPFEU Risque d'incendie actuel texte"
+      unique_id: sopfeu_risque_16_now_text
+      icon: mdi:fire-alert
+      state: >
+        {% if  is_state('sensor.sopfeu_risque_d_incendie_actuel', '1') %}
+           Bas
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '2') %}
+           Modéré
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '3') %}
+           Élevé
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '4') %}
+           Très Élevé
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '5') %}
+           Extrême
+        {% else %}
+           Invalide
+        {% endif %}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+        description: >
+          {% if  is_state('sensor.sopfeu_risque_d_incendie_actuel', '1') %}
+             Risque d’incendie de faible intensité à propagation limitée, c’est le bon moment pour allumer votre feu de camp.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '2') %}
+             Risque d’incendie de surface se propageant de façon modérée et se contrôlant généralement bien, faites uniquement des feux de petite dimension (1m X 1m maximum).
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '3') %}
+             Risque d’incendie de surface d’intensité modérée à vigoureuse qui pose des défis de contrôle lors du combat terrestre, n’allumez pas si la vitesse du vent est supérieure à 20 km/h.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '4') %}
+             Risque d’incendie de forte intensité avec allumage partiel ou complet des cimes dont les conditions au front sont au-delà de la capacité des équipes terrestres, faites des feux seulement dans des installations munies d’un pare-étincelles réglementaire.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_actuel', '5') %}
+             Risque d’incendie de cimes de fortes intensité, qui se propage à grande vitesse et qui peut devenir incontrôlable, évitez de faire des feux.
+          {% else %}
+             Erreur de traitement des données
+          {% endif %}
+
     - name: "SOPFEU Risque d'incendie demain"
       unique_id: sopfeu_risque_16_tomorrow
-      icon: mdi:pine-tree-fire
+      icon: mdi:fire-alert
       state: >
-        {{ states.sensor.sopfeu_risque_d_incendie_actuel.attributes.riskTomorrow }}
+        {{ state_attr('sensor.sopfeu_risque_d_incendie_data', 'riskTomorrow') }}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+
+    - name: "SOPFEU Risque d'incendie demain texte"
+      unique_id: sopfeu_risque_16_tomorrow_text
+      icon: mdi:fire-alert
+      state: >
+        {% if  is_state('sensor.sopfeu_risque_d_incendie_demain', '1') %}
+           Bas
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '2') %}
+           Modéré
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '3') %}
+           Élevé
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '4') %}
+           Très Élevé
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '5') %}
+           Extrême
+        {% else %}
+           Invalide
+        {% endif %}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+        description: >
+          {% if  is_state('sensor.sopfeu_risque_d_incendie_demain', '1') %}
+             Risque d’incendie de faible intensité à propagation limitée, c’est le bon moment pour allumer votre feu de camp.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '2') %}
+             Risque d’incendie de surface se propageant de façon modérée et se contrôlant généralement bien, faites uniquement des feux de petite dimension (1m X 1m maximum).
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '3') %}
+             Risque d’incendie de surface d’intensité modérée à vigoureuse qui pose des défis de contrôle lors du combat terrestre, n’allumez pas si la vitesse du vent est supérieure à 20 km/h.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '4') %}
+             Risque d’incendie de forte intensité avec allumage partiel ou complet des cimes dont les conditions au front sont au-delà de la capacité des équipes terrestres, faites des feux seulement dans des installations munies d’un pare-étincelles réglementaire.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_demain', '5') %}
+             Risque d’incendie de cimes de fortes intensité, qui se propage à grande vitesse et qui peut devenir incontrôlable, évitez de faire des feux.
+          {% else %}
+             Erreur de traitement des données
+          {% endif %}
+ 
+    - name: "SOPFEU Risque d'incendie après-demain texte"
+      unique_id: sopfeu_risque_16_after_tomorrow_text
+      icon: mdi:fire-alert
+      state: >
+        {% if  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '1') %}
+           Bas
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '2') %}
+           Modéré
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demainn', '3') %}
+           Élevé
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '4') %}
+           Très Élevé
+        {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '5') %}
+           Extrême
+        {% else %}
+           Invalide
+        {% endif %}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+        description: >
+          {% if  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '1') %}
+             Risque d’incendie de faible intensité à propagation limitée, c’est le bon moment pour allumer votre feu de camp.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '2') %}
+             Risque d’incendie de surface se propageant de façon modérée et se contrôlant généralement bien, faites uniquement des feux de petite dimension (1m X 1m maximum).
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '3') %}
+             Risque d’incendie de surface d’intensité modérée à vigoureuse qui pose des défis de contrôle lors du combat terrestre, n’allumez pas si la vitesse du vent est supérieure à 20 km/h.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demainn', '4') %}
+             Risque d’incendie de forte intensité avec allumage partiel ou complet des cimes dont les conditions au front sont au-delà de la capacité des équipes terrestres, faites des feux seulement dans des installations munies d’un pare-étincelles réglementaire.
+          {% elif  is_state('sensor.sopfeu_risque_d_incendie_apres_demain', '5') %}
+             Risque d’incendie de cimes de fortes intensité, qui se propage à grande vitesse et qui peut devenir incontrôlable, évitez de faire des feux.
+          {% else %}
+             Erreur de traitement des données
+          {% endif %}
 
     - name: "SOPFEU Risque d'incendie après-demain"
       unique_id: sopfeu_risque_16_after_tomorrow
-      icon: mdi:pine-tree-fire
+      icon: mdi:fire-alert
       state: >
-        {{ states.sensor.sopfeu_risque_d_incendie_actuel.attributes.riskAfterTomorrow }}
+        {{ state_attr('sensor.sopfeu_risque_d_incendie_data', 'riskAfterTomorrow') }}
+      attributes:
+        attribution: Données fournies par la SOPFEU
 
     - name: "SOPFEU Feux actifs au Québec"
       unique_id: sopfeu_feux_actifs_total
+      icon: mdi:pine-tree-fire
       state: >
-        {{ states.sensor.sopfeu_feux_actifs_data.attributes.fires | selectattr('state.id', 'in', [5, 4, 3]) | list | length }}
-
+        {{ state_attr('sensor.sopfeu_feux_actifs_data', 'fires') | selectattr('state.id', 'in', [5, 4, 3]) | list | length | int }}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+    
     - name: "SOPFEU Feux actifs secteur"
       unique_id: sopfeu_feux_actifs_secteur
+      icon: mdi:pine-tree-fire
       state: >
-        {% set fires = states.sensor.sopfeu_feux_actifs_data.attributes.fires %}
+        {% set fires = state_attr('sensor.sopfeu_feux_actifs_data', 'fires') %}
         {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('managementUnitId', '==', 151) | list %}
-        {{ filtered_fires | length }}
-
+        {{ filtered_fires | length | int}}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+    
     - name: "SOPFEU Feux actifs MRC"
       unique_id: sopfeu_feux_actifs_mrc
+      icon: mdi:pine-tree-fire
       state: >
-        {% set fires = states.sensor.sopfeu_feux_actifs_data.attributes.fires %}
-        {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('mrcId', '==', 78) | list %}
-        {{ filtered_fires | length }}
+        {% set fires = state_attr('sensor.sopfeu_feux_actifs_data', 'fires') %}
+        {% set filtered_fires = fires | selectattr('state.id', 'in', [5, 4, 3]) | selectattr('mrcId', '==', 77) | list %}
+        {{ filtered_fires | length | int}}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+
+    - name: "SOPFEU Feux actifs secteur Geojson"
+      unique_id: sopfeu_feux_actifs_secteur_geojson
+      state: >
+        {{ states.sensor.sopfeu_feux_actifs_data.attributes.updatedAt.0.max }}
+      attributes:
+        attribution: Données fournies par la SOPFEU
+        geojson: |-
+          {
+            "type": "FeatureCollection",
+            "features": [
+              {% for fire in state_attr('sensor.sopfeu_feux_actifs_data', 'fires') -%}
+                {% if fire.managementUnitId == 151 -%}
+                {
+                  "type": "Feature",
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [{{ fire.lng }}, {{ fire.lat }}]
+                  },
+                  "properties": {
+                    "title": "FEU {{ fire.num }}",
+                    "Début": "{{ fire.begin_at }}",
+                    "Condition": "{{ fire.state.name }}",
+                    "Cause": "{{ fire.origin.name }}",
+                    "Zone": "{{ fire.protectionSection.name }}",
+                    "Superficie estimée (ha)": {{ fire.surface }},
+                    "MRC": "{{ fire.mrc.name }}",
+                    "Unité de gestion": "{{ fire.managementUnit.name }}",
+                    "MÀJ": "{{ fire.updatedAt }}"
+                  }
+                }{% if not loop.last %},{% endif %}
+                {% endif -%}
+              {% endfor -%}
+            ]
+          }
