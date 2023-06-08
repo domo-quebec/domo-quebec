@@ -1,0 +1,19 @@
+command_line:
+  - sensor:
+      name: CAA Prix Essence DATA
+      unique_id: CAA_prix_essence_data
+      command: 'curl -s --request POST "https://www.caa.ca/wp/wp-admin/admin-ajax.php" --form action=getCitiesForDropdown --form caa_dropdown=QUEBEC'
+      value_template: 'OK'
+      json_attributes:
+        - today
+        - arrow
+      scan_interval: 3600
+
+template:
+  - sensor:  
+    - name: "CAA Prix Essence Montréal"
+      unique_id: CAA_prix_essence_montreaL
+      icon: mdi:gas-station
+      state: >
+        {% set caa_prix_essence_data = states('sensor.caa_prix_essence_data')|from_json %}
+        {{ caa_prix_essence_data.today.montreal }}
