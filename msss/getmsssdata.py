@@ -26,7 +26,19 @@ csv_rows = [row for row in csv_data]
 
 # Step 5: Convert the CSV to JSON
 headers = csv_rows[0]
-json_data = [dict(zip(headers, row)) for row in csv_rows[1:]]
+json_data = {}
+for row in csv_rows[1:]:
+    if len(row) > 0:  # Check if the row is not empty
+        rsss = row[0]
+        entry = {header: value for header, value in zip(headers[1:], row[1:])}
+        if rsss not in json_data:
+            json_data[rsss] = []
+        json_data[rsss].append(entry)
 
-# Step 6: Output the JSON data
+# Step 6: Save the JSON data
+output_file = 'data_msss.json'
+with open(output_file, 'w') as file:
+    json.dump(json_data, file, indent=4, ensure_ascii=False)
+
+# Step 7: Output the JSON data
 print(json.dumps(json_data, indent=4, ensure_ascii=False))
