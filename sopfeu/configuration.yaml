@@ -27,7 +27,7 @@ sensor:
       - riskAfterTomorrow
       - updatedAt
     scan_interval: 1800
-  
+ 
 template:
   - sensor:
     - name: "SOPFEU Risque d'incendie actuel"
@@ -218,3 +218,13 @@ template:
               {% endfor -%}
             ]
           }
+
+command_line:
+  - sensor:
+      name: SOPFEU Feux Geojson
+      command: |-
+        curl -s --request GET "https://cartes.sopfeu.qc.ca/fires?filterChoice=active" | jq -c '{ "type": "FeatureCollection", "features": [.fires[] | { "type": "Feature", "geometry": { "type": "Point", "coordinates": [ .lng, .lat ] }, "properties": { "id": .num, "date": .begin_at, "dateformat": "ISO-8601", "title": ("FEU " + (.num | tostring)),  "Début": .begin_at, "surface": .surface, "Cause": .origin.name, "MRC": .mrc.name, "Unité de gestion": .managementUnit.name, "url": .url } } ] }' > /config/www/sopfeu.geojson
+      scan_interval: 1800
+
+geo_location:
+  - platform: geo_json_events

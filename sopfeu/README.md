@@ -22,11 +22,31 @@ curl -s --request GET https://cartes.sopfeu.qc.ca/risk-zones | jq
 
 ### Capteurs
 
-Les valeurs du fichier [sensors.yaml](sensors.yaml) doivent être ajoutées à votre configuration. Prenez soin d'ajuster les valeurs  afin de refléter la région pour laquelle vous voulez les niveaux d'alertes.
+Les valeurs du fichier [configuration.yaml](configuration.yaml) doivent être ajoutées à votre configuration. Prenez soin d'ajuster les valeurs  afin de refléter la région pour laquelle vous voulez les niveaux d'alertes.
 
 Les exemples utilisent la région 16 (Laurentides) pour les risques, la zone de gestion 151 (Laurentides) et la MRC 78 (Les Laurentides) pour les feux actifs, les autres valeurs possibles découvertes jusqu'à maintenant sont inscrites plus bas.
 
 **SVP, ne réduisez pas inutilement le scan_interval, une vérification aux heures est amplement suffisante et évite de faire des requêtes inutiles aux serveurs de SOPFEU.**
+
+## Geojson et alertes
+
+Le capteur de ligne de commande "SOPFEU Feux Geojson" extrait et converti le fichier json des feux actifs en format geojson et le place dans le dossier `www/` afin de le rendre accessible via http(s) avec Home-Assistant. Vous aurez possiblement à ajuster la dernière section de la commande (la destination du fichier) si vous utilisez autre chose que le conteneur officiel d'Home-Assistant.
+
+Une fois le fichier présent vous pouvez configurer l'intégration [GeoJson](https://www.home-assistant.io/integrations/geo_json_events/) et utiliser l’URL `http{s}://{votre HA}:{port au besoin}/local/sopfeu.geojson` afin que l'intégration génère automatiquement des entités pour les feux dans le radius configuré.
+
+![Configuration](images/geojson/geojson1.png)
+
+![Alt text](images/geojson/geojson2.png)
+
+![Alt text](images/geojson/geojson3.png)
+
+![Alt text](images/geojson/geojson4.png)
+
+Vous pouvez initialement mettre un radius qui englobe la province au complet pour vérifier que ça fonctionne bien et recréer l'intégration avec un plus petit radius.
+
+Par la suite une automatisation peut être mise en place pour vous alerter quand il y a un feu déclaré dans votre zone. Un exemple est disponible dans la documentation Home-Assistant pour l'intégration [Geo Location](https://www.home-assistant.io/integrations/geo_location/).
+
+Le sensor de ligne de commande inclut plusieurs données au format GeoJson, par contre l'intégration Home-Assistant n'est pas en mesure de tout les intégrer.
 
 ### Interface lovelace
 
