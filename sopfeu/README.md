@@ -38,10 +38,9 @@ Sous le dossier lovelace vous trouverez deux visualisations à ajouter à votre 
 
 #### Visuel Forêt
 
+![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/a69a56b3-143d-4bd7-8117-c2ad96443674)
 
-[<img src="lovelace/visuel-foret/foret1.jpeg" width="500"/>](lovelace/visuel-foret/foret1.jpeg)
-
-[<img src="lovelace/visuel-foret/foret2.jpeg" width="500"/>](lovelace/visuel-foret/foret2.jpeg)
+![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/111e4fd9-2aac-40c7-8ed4-d00730036f5a)
 
 #### Carte des feux actifs
 
