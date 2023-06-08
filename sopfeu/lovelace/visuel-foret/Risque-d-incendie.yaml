@@ -12,7 +12,7 @@
      - entity: sensor.sopfeu_risque_d_incendie_demain_texte
      - entity: sensor.sopfeu_risque_d_incendie_apres_demain_texte
      - entity: sensor.sopfeu_feux_actifs_au_quebec
-       name: "Feu Actif au Québec"
+       name: "Feux Actifs au Québec"
        icon: mdi:fire-circle
    layout:
      template:
