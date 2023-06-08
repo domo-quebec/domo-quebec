@@ -184,41 +184,6 @@ template:
       attributes:
         attribution: Données fournies par la SOPFEU
 
-    - name: "SOPFEU Feux actifs secteur Geojson"
-      unique_id: sopfeu_feux_actifs_secteur_geojson
-      state: >
-        {{ states.sensor.sopfeu_feux_actifs_data.attributes.updatedAt.0.max }}
-      attributes:
-        attribution: Données fournies par la SOPFEU
-        geojson: |-
-          {
-            "type": "FeatureCollection",
-            "features": [
-              {% for fire in state_attr('sensor.sopfeu_feux_actifs_data', 'fires') -%}
-                {% if fire.managementUnitId == 151 -%}
-                {
-                  "type": "Feature",
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [{{ fire.lng }}, {{ fire.lat }}]
-                  },
-                  "properties": {
-                    "title": "FEU {{ fire.num }}",
-                    "Début": "{{ fire.begin_at }}",
-                    "Condition": "{{ fire.state.name }}",
-                    "Cause": "{{ fire.origin.name }}",
-                    "Zone": "{{ fire.protectionSection.name }}",
-                    "Superficie estimée (ha)": {{ fire.surface }},
-                    "MRC": "{{ fire.mrc.name }}",
-                    "Unité de gestion": "{{ fire.managementUnit.name }}",
-                    "MÀJ": "{{ fire.updatedAt }}"
-                  }
-                }{% if not loop.last %},{% endif %}
-                {% endif -%}
-              {% endfor -%}
-            ]
-          }
-
 command_line:
   - sensor:
       name: SOPFEU Feux Geojson
