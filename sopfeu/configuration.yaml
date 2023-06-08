@@ -228,3 +228,4 @@ command_line:
 
 geo_location:
   - platform: geo_json_events
+    url: "http(s)://(VOTRE URL HA)/local/sopgeu.geojson"
