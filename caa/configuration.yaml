@@ -1,0 +1,43 @@
+command_line:
+  - sensor:
+      name: CAA Prix Essence DATA
+      unique_id: CAA_prix_essence_data
+      command: 'curl -s --request POST "https://www.caa.ca/wp/wp-admin/admin-ajax.php" --form action=getCitiesForDropdown --form caa_dropdown=QUEBEC'
+      json_attributes:
+        - today
+        - arrow
+        - yesterday
+        - last-week
+        - last-month
+        - last-year
+      scan_interval: 3600
+
+template:
+  - sensor:
+    - name: "CAA Prix Essence Montréal Aujourd'hui"
+      unique_id: caa_gas_today_montreal
+      icon: >
+        {% if state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "up"  %}
+          mdi:arrow-up
+        {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "equal"  %}
+          mdi:equal
+        {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "down"  %}
+          mdi:arrow-down
+        {% endif %}
+      device_class: monetary
+      unit_of_measurement: "CAD/l"
+      state: >
+        {% set val = state_attr('sensor.caa_prix_essence_data', 'today')['MONTREAL'] | float / 100 %}
+        {{ val | round(3) }}
+      attributes:
+        attribution: Données fournies par CAA Québec
+        arrow: >
+          {{ state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] }}
+        yesterday: >
+          {{ state_attr('sensor.caa_prix_essence_data', 'yesterday')['MONTREAL'] }}
+        last-week: >
+          {{ state_attr('sensor.caa_prix_essence_data', 'last-week')['MONTREAL'] }}
+        last-month: >
+          {{ state_attr('sensor.caa_prix_essence_data', 'last-month')['MONTREAL'] }}
+        last-year: >
+          {{ state_attr('sensor.caa_prix_essence_data', 'last-year')['MONTREAL'] }}
