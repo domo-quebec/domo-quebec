@@ -1,7 +1,4 @@
-# Vue Météo
-
-
-            
+# Indice de la qualité. de l'air
           - type: 'custom:swiss-army-knife-card'
             entities:
               - entity: sensor.iqa_numeric_shawinigan
