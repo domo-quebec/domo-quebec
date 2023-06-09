@@ -11,7 +11,7 @@ Il est possible d'extraire ces données en format json avec la commande suivante
 
 ### Capteurs
 
-Les valeurs du fichier [sensors.yaml](sensors.yaml) doivent être ajoutées à votre configuration. Prenez soin d'ajuster les valeurs afin de refléter la région pour laquelle vous voulez les données. Attention, les majuscules doivent être respectées.
+Les valeurs du fichier [configuration.yaml](configuration.yaml) doivent être ajoutées à votre configuration. Prenez soin d'ajuster les valeurs afin de refléter la région pour laquelle vous voulez les données. Attention, les majuscules doivent être respectées.
 
 L'icon varie selon la variation du prix pour désactiver le changement d'icon, seulement remplacée :
 
