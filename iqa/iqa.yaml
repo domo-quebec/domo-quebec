@@ -1,0 +1,16 @@
+# Vue Météo
+
+
+            
+          - type: 'custom:swiss-army-knife-card'
+            entities:
+              - entity: sensor.iqa_numeric_shawinigan
+                name: "IQA"
+              - entity: sensor.iqa_numeric_shawinigan
+                secondary_info: last_changed
+                format: relative
+              - entity: sensor.iqa_text_shawinigan
+                icon: mdi:air-filter
+            layout:
+              template:
+                name: sak_layout_mjt_iqa
