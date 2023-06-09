@@ -1,0 +1,16 @@
+scrape:
+  - resource: https://www.iqa.environnement.gouv.qc.ca/contenu/indice.asp?site=1803
+    sensor:
+      - name: "IQA text Shawinigan"
+        select: "b"
+        index: 1
+    scan_interval: 1800
+
+  - resource: https://www.iqa.environnement.gouv.qc.ca/contenu/indice.asp?site=1803
+    sensor:
+      - name: "IQA numeric Shawinigan"
+        select: "img"
+        index: 3
+        attribute: src
+        value_template: '{{ value | regex_replace("[^0-9]","")}}'
+    scan_interval: 1800
