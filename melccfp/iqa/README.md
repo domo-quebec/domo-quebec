@@ -4,9 +4,9 @@ Une option visuelle de l'indice de la qualité de l'air.
 
 Il est important de noter que l'IQA au Québec utilises un standard différent de celui du NOAA des États-Unis ou du reste du Canada.
 
-[IQA au Québec](https://www.iqa.environnement.gouv.qc.ca/contenu/calcul.htm) Échelle de 1 à >75
-[IQA au Canada](https://weather.gc.ca/airquality/pages/index_e.html) Échelle de 1 à 10
-[IQA aux États-Unis et une bonne partie de la planète](https://www.airnow.gov/aqi/aqi-basics/) Échelle de 1 à >300
+* [IQA au Québec](https://www.iqa.environnement.gouv.qc.ca/contenu/calcul.htm) Échelle de 1 à >75
+* [IQA au Canada](https://weather.gc.ca/airquality/pages/index_e.html) Échelle de 1 à 10
+* [IQA aux États-Unis et une bonne partie de la planète](https://www.airnow.gov/aqi/aqi-basics/) Échelle de 1 à >300
 
 
 ## Installation
