@@ -6,12 +6,13 @@ Ce dépôt a pour but de documenter l'accès à différentes ressources d'intér
 
 | Plateforme | Description | État |
 |-|-|-|
-| Sopfeu | Indice de danger d'incendie |Fonctionnel|
+| Sopfeu | Indice de danger d'incendie et feux actifs |Fonctionnel|
 | Hydro-Québec | Données Ouvertes | Fonctionnel |
 | MSSS | Occupation Urgences | En cours |
-| CAA | Prix Essence | En cours |
+| CAA | Prix Essence | Fonctionnel |
 | MTQ | Caméras | Fonctionnel |
 | MSP | Fil multirisque | En cours |
+| MELCCFP | Indice de la qualité de l'air | Fonctionnel |
 
 ## Contribution
 
