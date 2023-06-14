@@ -104,7 +104,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 
 - Installer [Mushroom](https://github.com/piitaya/lovelace-mushroom) depuis le HACS.
 - Copier le fichier caa_mushroom_chips_card_prix_aujourdhui.yaml dans votre environnement pour avoir le prix actuel.
-- Copier le fichier caa_mushroom_chips_card_prix_aujourdhui_hier.yaml dans votre environnement pour avoir le prix actuel et celui d'hier.
+- Copier le fichier caa_mushroom_chips_card_prix_aujourdhui_hier.yaml dans votre environnement pour avoir les deux prix.
 - Copier le fichier caa_mushroom_entity_card.yaml dans votre environnement pour avoir le prix actuel.
 
 <img width="114" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/b18b1bc7-9ae8-4867-9e7c-0740905ae84a">
