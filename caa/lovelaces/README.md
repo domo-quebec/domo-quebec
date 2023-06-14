@@ -102,7 +102,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 
 ### Installation
 
-- Installer [Mushroom](https://github.com/RomRider/apexcharts-card) depuis le HACS.
+- Installer [Mushroom](https://github.com/piitaya/lovelace-mushroom) depuis le HACS.
 - Copier le fichier caa_mushroom_chips_card_prix_aujourdhui.yaml dans votre environnement pour avoir le prix actuel.
 - Copier le fichier caa_mushroom_chips_card_prix_aujourdhui_hier.yaml dans votre environnement pour avoir le prix actuel et celui d'hier.
 - Copier le fichier caa_mushroom_entity_card.yaml dans votre environnement pour avoir le prix actuel.
