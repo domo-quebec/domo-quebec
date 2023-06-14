@@ -105,7 +105,39 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 - Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
 - Copier le fichier **historiques.yaml** dans votre environnement.
 - Ajouter les sensors pour avoir l'historique dans le fichier de configuration.
-  Exemple de sensors:
+- Exemple de sensors:
+```
+    - name: "CAA Prix Essence Shawinigan la semaine dernière"
+      unique_id: caa_gas_last_week_shawinigan 
+      icon: mdi:calendar-week
+      device_class: monetary
+      unit_of_measurement: "CAD/L"
+      state: >
+       {% set val1 = state_attr('sensor.caa_prix_essence_data', 'last_week')['SHAWINIGAN'] | float / 100 %}
+       {{ val1 | round(3) }}
+
+    - name: "CAA Prix Essence Shawinigan le mois dernier"
+      unique_id: caa_gas_last_month_shawinigan 
+      icon: mdi:calendar-month
+      device_class: monetary
+      unit_of_measurement: "CAD/L"
+      state: >
+       {% set val1 = state_attr('sensor.caa_prix_essence_data', 'last_month')['SHAWINIGAN'] | float / 100 %}
+       {{ val1 | round(3) }}
+       
+    - name: "CAA Prix Essence Shawinigan l'année dernière"
+      unique_id: caa_gas_last_year_shawinigan 
+      icon: mdi:calendar-multiselect-outline
+      device_class: monetary
+      unit_of_measurement: "CAD/L"
+      state: >
+       {% set val1 = state_attr('sensor.caa_prix_essence_data', 'last_year')['SHAWINIGAN'] | float / 100 %}
+       {{ val1 | round(3) }}
+```
+
+
+  ![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/0e673a40-18af-4a98-8aad-272132a7b3ec)
+
 
 ## Cartes Mushroom
 
