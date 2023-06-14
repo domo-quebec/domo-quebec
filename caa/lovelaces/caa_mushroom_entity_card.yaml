@@ -1,0 +1,11 @@
+- type: custom:mushroom-entity-card
+  entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+  name: Prix de l’essence
+  tap_action:
+    action: none
+  hold_action:
+    action: none
+  double_tap_action:
+    action: none
+  icon_type: icon
+  icon_color: light-blue

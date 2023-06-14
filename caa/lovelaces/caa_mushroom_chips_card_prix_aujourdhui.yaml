@@ -1,0 +1,4 @@
+- type: custom:mushroom-chips-card
+  chips:
+    - type: entity
+      entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
