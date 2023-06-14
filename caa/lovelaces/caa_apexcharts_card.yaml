@@ -1,0 +1,27 @@
+- type: custom:apexcharts-card
+  header:
+    standard_format: true
+    show: true
+    show_states: true
+    colorize_states: true
+    title: "Prix de l'essence"
+    disable_actions: true
+  graph_span: 10d
+  span:
+    end: day
+  show:
+    last_updated: true
+  yaxis:
+    - min: 0.75
+      max: ~2.00
+      decimals: 2
+  series:
+    - entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+      type: column
+      name: "Actuellement"
+      stroke_width: 10
+      float_precision: 3
+      fill_raw: last
+      show:
+        legend_value: false
+        extremas: true

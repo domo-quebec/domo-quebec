@@ -1,0 +1,47 @@
+- type: horizontal-stack
+  cards:
+    - type: "custom:mini-graph-card"
+      entities:
+        - entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+          color: green
+          show_fill: true
+      name: "Prix actuellement"
+      font_size: 95
+      hours_to_show: 168
+      line_width: 5
+      hour24: true
+      points_per_hour: 1
+      decimals: 3
+      show:
+        animate: true
+        icon: true
+        labels: false
+        legend: false
+        name: true
+        graph: line
+        extrema: true
+        average: false
+
+    - type: "custom:button-card"
+      theme: ios-dark-mode-blue-red
+      entity: sensor.caa_prix_essence_shawinigan_hier
+      aspect_ratio: 1/1.5
+      decimals: 3
+      color: "rgb(41, 158, 200)"
+      icon: mdi:gas-station
+      name: "Prix hier"
+      show_state: true
+      size: 60%
+      state:
+        - color: "var(--disabled-text-color)"
+          value: "off"
+        - color: "rgb(41, 158, 194)"
+          value: "on"
+      styles:
+        name:
+          - text-transform: uppercase
+          - font-size: 15px
+        state:
+          - text-transform: uppercase
+          - font-size: 20px
+          - font: bold

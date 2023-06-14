@@ -1,0 +1,47 @@
+- type: entities
+  title: Prix carburants
+  entities:
+    - type: section
+
+    - type: custom:multiple-entity-row
+      entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+      name: Shawinigan
+      show_state: false
+      secondary_info: last-changed
+      entities:
+        - entity: sensor.caa_prix_essence_shawinigan_hier
+          name: Hier
+          unit: $
+        - entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+          name: Actuel
+          unit: $
+
+    - type: section
+
+    - type: custom:multiple-entity-row
+      entity: sensor.caa_prix_essence_trois_rivieres_aujourd_hui
+      name: Trois-Rivères
+      show_state: false
+      secondary_info: last-changed
+      entities:
+        - entity: sensor.caa_prix_essence_trois_rivieres_hier
+          name: false
+          unit: $
+        - entity: sensor.caa_prix_essence_trois_rivieres_aujourd_hui
+          name: false
+          unit: $
+
+    - type: section
+
+    - type: custom:multiple-entity-row
+      entity: sensor.caa_prix_essence_montreal_aujourd_hui
+      name: Montréal
+      show_state: false
+      secondary_info: last-changed
+      entities:
+        - entity: sensor.caa_prix_essence_montreal_hier
+          name: false
+          unit: $
+        - entity: sensor.caa_prix_essence_montreal_aujourd_hui
+          name: false
+          unit: $

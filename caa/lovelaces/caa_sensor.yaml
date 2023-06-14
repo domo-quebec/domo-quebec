@@ -1,0 +1,7 @@
+- type: sensor
+  graph: line
+  detail: 1
+  entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+  name: Prix de l’essence
+  unit: $
+  hours_to_show: 168
