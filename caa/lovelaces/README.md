@@ -99,14 +99,17 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essenece actuel 
 <img width="625" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/dca99502-039c-494e-ad68-48c0e675c5a5">
 
 
-## Carte mushroom chips card
+## Carte Mushroom
 
 ### Installation
 
 - Installer [Mushroom](https://github.com/RomRider/apexcharts-card) depuis le HACS.
 - Copier le fichier caa_mushroom_chips_card_prix_aujourdhui.yaml dans votre environnement pour avoir le prix actuel.
 - Copier le fichier caa_mushroom_chips_card_prix_aujourdhui_hier.yaml dans votre environnement pour avoir le prix actuel et celui d'hier.
+- Copier le fichier caa_mushroom_entity_card.yaml dans votre environnement pour avoir le prix actuel.
 
 <img width="114" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/b18b1bc7-9ae8-4867-9e7c-0740905ae84a">
 <img width="218" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/ccb87420-f051-425a-9d3d-9bb6b5bbcc2d">
+<img width="484" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/0165d4a7-81d5-42a6-9567-90f27e9823c4">
+
 
