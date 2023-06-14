@@ -19,9 +19,11 @@
     - entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
       type: column
       name: "Actuellement"
-      stroke_width: 10
       float_precision: 3
-      fill_raw: last
+      group_by:
+        func: last
+        duration: 1d
+      stroke_width: 5
       show:
         legend_value: false
         extremas: true
