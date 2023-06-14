@@ -15,7 +15,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 
 ### Installation
 
-- Copier le fichier caa_mini_graph_card_button_card.yaml dans votre environnement.
+- Copier le fichier caa_sensor.yaml dans votre environnement.
 
 <img width="626" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/21947e5d-2eb7-44fb-8cac-5df2de97b47f">
 
