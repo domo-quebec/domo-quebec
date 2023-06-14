@@ -7,9 +7,9 @@ command_line:
         - today
         - arrow
         - yesterday
-        - last-week
-        - last-month
-        - last-year
+        - last_week
+        - last_month
+        - last_year
       scan_interval: 3600
 
 template:
