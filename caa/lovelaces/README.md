@@ -26,7 +26,9 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 - Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
 - Copier le fichier **caa_multiple_entity_row_card.yaml** dans votre environnement.
 - Ajouter les sensors pour les villes que vous voulez suivrent dans le fichier de configuration.
-  - Exemple:
+
+
+- Exemple de sensors:
  
  ```
    - sensor:
