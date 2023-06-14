@@ -98,7 +98,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 <img width="625" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/dca99502-039c-494e-ad68-48c0e675c5a5">
 
 
-## Carte Mushroom
+## Cartes Mushroom
 
 ### Installation
 
