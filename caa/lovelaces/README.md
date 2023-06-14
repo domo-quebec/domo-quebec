@@ -25,8 +25,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 
 - Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
 - Copier le fichier **caa_multiple_entity_row_card.yaml** dans votre environnement.
-- Ajouter les sensors pour les villes que vous voulez suivrent dans le fichier de configuration.
-
+- Ajouter les sensors pour les villes que vous voulez suivrent dans le fichier de configuration
 
 - Exemple de sensors:
  
@@ -99,6 +98,14 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 ```
 <img width="625" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/dca99502-039c-494e-ad68-48c0e675c5a5">
 
+## Carte Historiques
+
+### Installation
+
+- Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
+- Copier le fichier **historiques.yaml** dans votre environnement.
+- Ajouter les sensors pour avoir l'historique dans le fichier de configuration.
+  Exemple de sensors:
 
 ## Cartes Mushroom
 
