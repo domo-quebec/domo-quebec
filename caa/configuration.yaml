@@ -36,8 +36,8 @@ template:
         yesterday: >
           {{ state_attr('sensor.caa_prix_essence_data', 'yesterday')['MONTREAL'] }}
         last-week: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'last-week')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'last_week')['MONTREAL'] }}
         last-month: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'last-month')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'last_month')['MONTREAL'] }}
         last-year: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'last-year')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'last_year')['MONTREAL'] }}
