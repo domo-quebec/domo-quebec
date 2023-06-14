@@ -112,4 +112,13 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essenece actuel 
 <img width="218" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/ccb87420-f051-425a-9d3d-9bb6b5bbcc2d">
 <img width="484" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/0165d4a7-81d5-42a6-9567-90f27e9823c4">
 
+## Carte Mini Graph et Button
+
+### Installation
+
+- Installer [Mini-graph](https://github.com/RomRider/apexcharts-card) depuis le HACS.
+- Installer [Button](https://github.com/RomRider/apexcharts-card) depuis le HACS.
+- Copier le fichier caa_mini_graph_card_button_card.yaml dans votre environnement.
+
+<img width="629" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/ed7f75ec-0b72-4ab9-a8bc-4919d2be2329">
 
