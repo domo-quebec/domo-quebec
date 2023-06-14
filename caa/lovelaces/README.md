@@ -1,6 +1,6 @@
 #  Prix de l'essence
 
-Ce répertoire inclu plusieurs cartes pour afficiher le prix de l'essenece actuel et celui d'hier.
+Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essenece actuel et celui d'hier.
 
 ## Carte Apexcharts
 
@@ -97,3 +97,12 @@ Ce répertoire inclu plusieurs cartes pour afficiher le prix de l'essenece actue
        {{ val5 | round(3) }}
 ```
 <img width="625" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/dca99502-039c-494e-ad68-48c0e675c5a5">
+
+
+## Carte mushroom chips card
+
+### Installation
+
+- Installer [Mushroom](https://github.com/RomRider/apexcharts-card) depuis le HACS.
+- Copier le fichier caa_mushroom_chips_card_prix_aujourdhui.yaml dans votre environnement pour avoir le prix actuel.
+- Copier le fichier caa_mushroom_chips_card_prix_aujourdhui_hier.yaml dans votre environnement pour avoir le prix actuel et celui d'hier.
