@@ -1,6 +1,6 @@
 #  Prix de l'essence
 
-Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essenece actuel et celui d'hier.
+Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel et celui d'hier.
 
 ## Carte Apexcharts
 
