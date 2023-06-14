@@ -15,7 +15,7 @@ Ce répertoire inclu plusieurs cartes pour afficiher le prix de l'essenece actue
 
 ### Installation
 
-- Installer [Mini-graph](https://github.com/RomRider/apexcharts-card)depuis le HACS.
+- Installer [Mini-graph](https://github.com/RomRider/apexcharts-card) depuis le HACS.
 - Copier le fichier caa_mini_graph_card_button_card.yaml dans votre environnement.
 
 <img width="626" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/21947e5d-2eb7-44fb-8cac-5df2de97b47f">
@@ -24,7 +24,7 @@ Ce répertoire inclu plusieurs cartes pour afficiher le prix de l'essenece actue
 
 ### Installation
 
-- Installer [multiple-entity-row]([[https://github.com/RomRider/apexcharts-card](https://github.com/kalkih/mini-graph-card) depuis le HACS.
+- Installer [multiple-entity-row](https://github.com/RomRider/apexcharts-card) depuis le HACS.
 - Copier le fichier caa_multiple_entity_row_card.yaml dans votre environnement.
 - Ajouter les sensors pour les ville que vous voulez suivrent dans le fichier de configuration.
   - Exemple:
@@ -96,7 +96,4 @@ Ce répertoire inclu plusieurs cartes pour afficiher le prix de l'essenece actue
        {% set val5 = state_attr('sensor.caa_prix_essence_data', 'yesterday')['MONTREAL'] | float / 100 %}
        {{ val5 | round(3) }}
 ```
-      
-       
-
 <img width="625" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/dca99502-039c-494e-ad68-48c0e675c5a5">
