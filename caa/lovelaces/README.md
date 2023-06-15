@@ -9,7 +9,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 - Installer [Apexcharts](https://github.com/RomRider/apexcharts-card) depuis le HACS.
 - Copier le fichier **caa_apexcharts_card.yaml**  dans votre environnement.
 
-<img width="622" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/20bb1755-bdf9-4370-abb9-b44b651763df">
+![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/1f3b43e7-7684-407a-906a-50df98afa7b6)
 
 ## Carte Sensor
 
