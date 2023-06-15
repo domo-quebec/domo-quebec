@@ -1,0 +1,21 @@
+- type: entities
+  title: Historique du prix du carburants
+  entities:
+    - type: section
+    - type: custom:multiple-entity-row
+      entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+      name: Shawingan
+      show_state: false
+      icon: mdi:gas-station
+      secondary_info: last-changed
+      entities:
+        - entity: sensor.caa_prix_essence_shawinigan_l_annee_derniere
+          name: Année dernière
+        - entity: sensor.caa_prix_essence_shawinigan_le_mois_dernier
+          name: Mois dernier
+        - entity: sensor.caa_prix_essence_shawinigan_la_semaine_derniere
+          name: Semaine dernière
+        - entity: sensor.caa_prix_essence_shawinigan_hier
+          name: Hier
+        - entity: sensor.caa_prix_essence_shawinigan_aujourd_hui
+          name: Actuel

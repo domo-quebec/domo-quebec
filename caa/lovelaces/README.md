@@ -9,7 +9,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 - Installer [Apexcharts](https://github.com/RomRider/apexcharts-card) depuis le HACS.
 - Copier le fichier **caa_apexcharts_card.yaml**  dans votre environnement.
 
-<img width="622" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/20bb1755-bdf9-4370-abb9-b44b651763df">
+![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/1f3b43e7-7684-407a-906a-50df98afa7b6)
 
 ## Carte Sensor
 
@@ -25,8 +25,7 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
 
 - Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
 - Copier le fichier **caa_multiple_entity_row_card.yaml** dans votre environnement.
-- Ajouter les sensors pour les villes que vous voulez suivrent dans le fichier de configuration.
-
+- Ajouter les sensors pour les villes que vous voulez suivrent dans le fichier de configuration
 
 - Exemple de sensors:
  
@@ -98,6 +97,46 @@ Ce répertoire inclu plusieurs cartes pour affiher le prix de l'essence actuel e
        {{ val5 | round(3) }}
 ```
 <img width="625" alt="image" src="https://github.com/MichelJourdain/domo-quebec/assets/83040228/dca99502-039c-494e-ad68-48c0e675c5a5">
+
+## Carte Historiques
+
+### Installation
+
+- Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
+- Copier le fichier **historiques.yaml** dans votre environnement.
+- Ajouter les sensors pour avoir l'historique dans le fichier de configuration.
+- Exemple de sensors:
+```
+    - name: "CAA Prix Essence Shawinigan la semaine dernière"
+      unique_id: caa_gas_last_week_shawinigan 
+      icon: mdi:calendar-week
+      device_class: monetary
+      unit_of_measurement: "CAD/L"
+      state: >
+       {% set val1 = state_attr('sensor.caa_prix_essence_data', 'last_week')['SHAWINIGAN'] | float / 100 %}
+       {{ val1 | round(3) }}
+
+    - name: "CAA Prix Essence Shawinigan le mois dernier"
+      unique_id: caa_gas_last_month_shawinigan 
+      icon: mdi:calendar-month
+      device_class: monetary
+      unit_of_measurement: "CAD/L"
+      state: >
+       {% set val1 = state_attr('sensor.caa_prix_essence_data', 'last_month')['SHAWINIGAN'] | float / 100 %}
+       {{ val1 | round(3) }}
+       
+    - name: "CAA Prix Essence Shawinigan l'année dernière"
+      unique_id: caa_gas_last_year_shawinigan 
+      icon: mdi:calendar-multiselect-outline
+      device_class: monetary
+      unit_of_measurement: "CAD/L"
+      state: >
+       {% set val1 = state_attr('sensor.caa_prix_essence_data', 'last_year')['SHAWINIGAN'] | float / 100 %}
+       {{ val1 | round(3) }}
+```
+
+
+  ![image](https://github.com/MichelJourdain/domo-quebec/assets/83040228/0e673a40-18af-4a98-8aad-272132a7b3ec)
 
 
 ## Cartes Mushroom
