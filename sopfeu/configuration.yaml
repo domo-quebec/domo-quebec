@@ -27,7 +27,7 @@ sensor:
       - riskAfterTomorrow
       - updatedAt
     scan_interval: 1800
- 
+
 template:
   - sensor:
     - name: "SOPFEU Risque d'incendie actuel"
@@ -113,7 +113,7 @@ template:
           {% else %}
              Erreur de traitement des données
           {% endif %}
- 
+
     - name: "SOPFEU Risque d'incendie après-demain texte"
       unique_id: sopfeu_risque_16_after_tomorrow_text
       icon: mdi:fire-alert
@@ -163,7 +163,7 @@ template:
         {{ state_attr('sensor.sopfeu_feux_actifs_data', 'fires') | selectattr('state.id', 'in', [5, 4, 3]) | list | length | int }}
       attributes:
         attribution: Données fournies par la SOPFEU
-    
+
     - name: "SOPFEU Feux actifs secteur"
       unique_id: sopfeu_feux_actifs_secteur
       icon: mdi:pine-tree-fire
@@ -173,7 +173,7 @@ template:
         {{ filtered_fires | length | int}}
       attributes:
         attribution: Données fournies par la SOPFEU
-    
+
     - name: "SOPFEU Feux actifs MRC"
       unique_id: sopfeu_feux_actifs_mrc
       icon: mdi:pine-tree-fire
@@ -188,7 +188,7 @@ command_line:
   - sensor:
       name: SOPFEU Feux Geojson
       command: |-
-        curl -s --request GET "https://cartes.sopfeu.qc.ca/fires?filterChoice=active" | jq -c '{ "type": "FeatureCollection", "features": [.fires[] | { "type": "Feature", "geometry": { "type": "Point", "coordinates": [ .lng, .lat ] }, "properties": { "id": .num, "date": .begin_at, "dateformat": "ISO-8601", "title": ("FEU " + (.num | tostring)),  "Début": .begin_at, "surface": .surface, "Cause": .origin.name, "MRC": .mrc.name, "Unité de gestion": .managementUnit.name, "url": .url } } ] }' > /config/www/sopfeu.geojson
+        curl -s --request GET "https://cartes.sopfeu.qc.ca/fires?filterChoice=active" | jq -c '{ "type": "FeatureCollection", "features": [.fires[] | select(.statusId != 6) | { "type": "Feature", "geometry": { "type": "Point", "coordinates": [ .lng, .lat ] }, "properties": { "id": .num, "date": .begin_at, "dateformat": "ISO-8601", "title": ("FEU " + (.num | tostring)), "Début": .begin_at, "surface": .surface, "Cause": .origin.name, "MRC": .mrc.name, "Unité de gestion": .managementUnit.name, "url": .url } } ] }' > /config/www/sopfeu.geojson
       scan_interval: 1800
 
 geo_location:
