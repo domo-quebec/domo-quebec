@@ -1,0 +1,5 @@
+template:
+  - sensor:
+      - name: "Patient en attente de PEC Régional"
+        unique_id: "patient_pec_regional"
+        state: "{{ state_attr('sensor.msss', '11')[0]['Nombre_total_de_patients_en_attente_de_PEC'] }}"

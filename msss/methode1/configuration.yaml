@@ -1,0 +1,20 @@
+template:
+  - sensor:
+      - name: "MSSS Total régional"
+        unique_id: "regional_01"
+        icon: mdi:hospital
+        state: "{{ state_attr('sensor.msss', '11')[0]['Region'] }}"
+        attributes:
+          Nom de l'établissement: "{{ state_attr('sensor.msss', '11')[0]['Nom_etablissement'] }}"
+          Nom de l'installation: "{{ state_attr('sensor.msss', '11')[0]['Nom_installation'] }}"
+          Patient en attente de PEC: "{{ state_attr('sensor.msss', '11')[0]['Nombre_total_de_patients_en_attente_de_PEC'] }}"
+          Nombre de civière fonctionnelles: "{{ state_attr('sensor.msss', '11')[0]['Nombre_de_civieres_fonctionnelles '] }}"
+          Nombre de civière occupées: "{{ state_attr('sensor.msss', '11')[0]['Nombre_de_civieres_occupees'] }}"
+          Nombre de patients sur civière de plus de 24 heures: "{{ state_attr('sensor.msss', '11')[0]['Nombre_de_patients_sur_civiere_plus_de_24_heures'] }}"
+          Nombre de patients sur civière de plus de 48 heures: "{{ state_attr('sensor.msss', '11')[0]['Nombre_de_patients_sur_civiere_plus_de_48_heures'] }}"
+          Nombre de patients présents à l'urgence: "{{ state_attr('sensor.msss', '11')[0]['Nombre_total_de_patients_presents_a_lurgence'] }}"
+          DMS sur civière: "{{ state_attr('sensor.msss', '11')[0]['DMS_sur_civiere'] }}"
+          DMS sur civière horaire: "{{ state_attr('sensor.msss', '11')[0]['DMS_sur_civiere_horaire'] }}"
+          DMS ambulatoire: "{{ state_attr('sensor.msss', '11')[0]['DMS_ambulatoire'] }}"
+          DMS ambulatoire_horaire: "{{ state_attr('sensor.msss', '11')[0]['DMS_ambulatoire_horaire'] }}"
+          Mise à jour: "{{ state_attr('sensor.msss', '11')[0]['Mise_a_jour'] }}"

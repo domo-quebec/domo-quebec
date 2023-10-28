@@ -1,0 +1,14 @@
+shell_command:
+  execute_python_script_msss: python3 /config/getdata.py
+
+sensor:
+  - platform: rest
+    icon: mdi:hospital
+    resource: "https://pizza02.mivra.ca/local/data_msss.json"
+    name: "MSSS"
+    unique_id: MSSS_data
+    value_template: "OK"
+    json_attributes:
+      - "11"
+      - "99"
+    scan_interval: 1800
