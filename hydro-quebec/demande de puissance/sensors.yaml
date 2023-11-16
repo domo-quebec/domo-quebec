@@ -8,3 +8,6 @@
   state_class: measurement
   verify_ssl: true
   ssl_cipher_list: intermediate
+  value_template: >
+   {% set index =  value_json.indexDonneePlusRecent %}
+   {{ value_json.details[index]["valeurs"]["demandeTotal"] }}
