@@ -3,12 +3,15 @@
 ## Extraction des données
 TVA fourni une liste des fermeture d'écoles au format json.
 
-Liste des école et leur id: [https://www.tvanouvelles.ca/api/schools/list](https://www.tvanouvelles.ca/api/schools/list)
-Liste des fermetures: [https://www.tvanouvelles.ca/api/schools/closed](https://www.tvanouvelles.ca/api/schools/closed)
+- Liste des école et leur id: [https://www.tvanouvelles.ca/api/schools/list](https://www.tvanouvelles.ca/api/schools/list)
+
+- Liste des fermetures: [https://www.tvanouvelles.ca/api/schools/closed](https://www.tvanouvelles.ca/api/schools/closed)
 
 Selon les écoles un message peut être indiqué dans la section de fermeture et/ou dans un tableau.
 
 Un exemple de donnée est disponible dans le dossier [donnees](donnees)
+
+Le fichier des fermetures contient uniquement les écoles qui sont présentement fermées.
 
 ## Installation
 
