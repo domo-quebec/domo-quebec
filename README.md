@@ -6,14 +6,14 @@ Ce dépôt a pour but de documenter l'accès à différentes ressources d'intér
 
 | Plateforme | Description | État |
 |-|-|-|
-| Sopfeu | Indice de danger d'incendie et feux actifs |Fonctionnel|
-| Hydro-Québec | Données Ouvertes | Fonctionnel |
-| MSSS | Occupation Urgences | En cours |
 | CAA | Prix Essence | Fonctionnel |
-| MTQ | Caméras | Fonctionnel |
-| MSP | Fil multirisque | En cours |
+| Hydro-Québec | Données Ouvertes | Fonctionnel |
 | MELCCFP | Indice de la qualité de l'air | Fonctionnel |
-
+| MSP | Fil multirisque | En cours |
+| MSSS | Occupation Urgences | En cours |
+| MTQ | Caméras | Fonctionnel |
+| Sopfeu | Indice de danger d'incendie et feux actifs | Fonctionnel |
+| TVA | Fermeture des écoles | Fonctionnel |
 ## Contribution
 
 Si vous avez des idées d'autres sources de données d'intérêt n'hésitez pas à ouvrir un issue.
