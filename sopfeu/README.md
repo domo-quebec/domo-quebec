@@ -69,7 +69,9 @@ Sous le dossier lovelace vous trouverez deux visualisations à ajouter à votre 
 
 Les valeurs et ID suivants peuvent être utilisés pour filtrer les événements selon les différentes valeurs. Ils ont été extrait durant une période de feu assez active et devrais contenir la majorité des valeurs possible. Il n'est toutefois pas exclu qu'il en manque, si c'est le cas SVP ouvrez un "issue" github pour qu'on puisse les ajouter.
 
-### Valeurs de niveau de risque
+<details>
+<summary>Valeurs de niveau de risque</summary>
+
 |Valeur|Niveau|Description|
 |-|-|-|
 |1|BAS|Risque d’incendie de faible intensité à propagation limitée, c’est le bon moment pour allumer votre feu de camp.|
@@ -79,8 +81,10 @@ Les valeurs et ID suivants peuvent être utilisés pour filtrer les événements
 |5|EXTRÊME|Risque d’incendie de cimes de fortes intensité, qui se propage à grande vitesse et qui peut devenir incontrôlable, évitez de faire des feux.|
 
 Source: [https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/](https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/)
-### Liste des codes d'état
+</details>
 
+<details>
+<summary>Liste des codes d'état</summary>
 
 | id | État              |
 | -- | ----------------- |
@@ -92,8 +96,10 @@ Source: [https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/](https:/
 | 6  | Éteint            |
 
 [Référence sur les états](https://sopfeu.qc.ca/comprendre-les-conditions-dun-incendie/)
+</details>
 
-### Liste des codes d'origine
+<details>
+<summary>Liste des codes d'origine</summary>
 
 | id | Origine              |
 | -- | ----------------- |
@@ -106,8 +112,10 @@ Source: [https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/](https:/
 | 7  | Récréation        |
 | 8  | Diverses          |
 | 9  | À déterminer      |
+</details>
 
-### Liste de valeur Zone de risques (Région SOPFEU)
+<details>
+<summary>Liste de valeur Zone de risques (Région SOPFEU)</summary>
 
 | Zone | Emplacement                |
 |-------|----------------------------|
@@ -175,8 +183,10 @@ Source: [https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/](https:/
 | 5     | Val-d'Or-Senneterre        |
 | 50    | Waskaganish |
 | 52 | Wemindji |
+</details>
 
-### Liste des codes MRC
+<details>
+<summary>Liste des codes MRC</summary>
 
 | id  | MRC                      |
 | --- | ------------------------- |
@@ -249,17 +259,18 @@ Source: [https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/](https:/
 | 991 | Jamésie                   |
 | 993 | Nouveau toponyme à venir  |
 
-## Liste des codes des Unitées de Gestion
+</details>
 
+<details>
+<summary>Liste des codes des Unitées de Gestion</summary>
 
 | id   | Unité                          |
 | ---- | ------------------------------ |
-|      |                                |
 | 11   | Grand-portage                  |
 | 12   | Bas-st-laurent                 |
 | 23   | Saguenay-sud shipshaw          |
 | 24   | Riviere-péribonka              |
-| 25   | Roberval saint-félicien         |
+| 25   | Roberval saint-félicien        |
 | 27   | Mistassini                     |
 | 35   | Beauce-appalaches              |
 | 41   | Bas-saint-maurice              |
@@ -287,3 +298,6 @@ Source: [https://sopfeu.qc.ca/comment-calcule-t-on-le-danger-dincendie/](https:/
 | 112  | Gaspésie                        |
 | 141  | Lanaudière                      |
 | 151  | Laurentides                     |
+
+</details>
+
