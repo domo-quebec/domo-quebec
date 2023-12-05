@@ -10,6 +10,7 @@ sensor:
     scan_interval: 1800
 
 template:
+  - sensors:
     - name: École Saint-René
       unique_id: ecole_1267_fermeture
       state: >
