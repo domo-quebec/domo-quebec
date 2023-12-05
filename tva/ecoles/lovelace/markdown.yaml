@@ -1,5 +1,5 @@
 # École Saint-René
-## {{ states('sensor.ecole_st_joseph') }}
+## {{ states('sensor.ecole_saint_rene') }}
 {% if state_attr('sensor.ecole_saint_rene', 'message') | trim != '' or state_attr('sensor.ecole_saint_rene', 'information') | trim != '' -%}
 ### Informations<br>
 {% if state_attr('sensor.ecole_saint_rene', 'message') -%}
