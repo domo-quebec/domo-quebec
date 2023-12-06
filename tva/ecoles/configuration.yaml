@@ -32,7 +32,7 @@ template:
         {% if is_state('sensor.ecole_1267_fermeture', 'Fermée')  %}
           mdi:snowman
         {% elif is_state('sensor.ecole_1267_fermeture', 'Ouverte')  %}
-          mdi:townhall
+          mdi:town-hall
         {% endif %}
       attributes:
         message: >
