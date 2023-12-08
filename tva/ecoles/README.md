@@ -23,6 +23,19 @@ Vous pouvez trouver la liste des id dans le fichier [list.md](list.md). Il ne se
 
 ### Carte Lovelace
 
-Un exemple de carte lovelace markdown est disponible dans le dossier lovelace
+Un exemple de carte lovelace est disponible dans le dossier lovelace
+
+### Visulelle Markdown 
 
 ![Markdown Écoles](images/ecoles1.png)
+
+
+### Visulelle École et Tableau
+
+![Markdown École](lovelace/Visuelle-Ecole/exemples/stat_ecole_ouverte.jpg)
+
+![Markdown École](lovelace/Visuelle-Ecole/exemples/stat_ecole_fermee.jpg)
+
+![Markdown École](lovelace/Visuelle-Tableau/exemples/stat_tableau_ecole_ouverte.jpg)
+
+![Markdown École](lovelace/Visuelle-Tableau/exemples/stat_tableau_ecole_fermee.jpg)
