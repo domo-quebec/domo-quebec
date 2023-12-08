@@ -36,7 +36,7 @@ Un exemple de carte lovelace est disponible dans le dossier lovelace
 
 ![Markdown École](lovelace/Visuelle-Ecole/exemples/stat_ecole_fermee.jpg)
 
-### Visuelle École et Tableau
+### Visuelle Tableau
 
 ![Markdown École](lovelace/Visuelle-Tableau/exemples/stat_tableau_ecole_ouverte.jpg)
 
