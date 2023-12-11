@@ -1,7 +1,7 @@
 - type: custom:vertical-stack-in-card
   cards:
     - type: custom:mushroom-template-card
-      primary: "{{ state_attr('sensor.non_ecole', 'friendly_name') }}"
+      primary: "{{ state_attr('sensor.nom_ecole', 'friendly_name') }}"
       secondary: ""
       icon: mdi:school-outline
       fill_container: true
@@ -13,23 +13,22 @@
         action: none
       layout: vertical
       icon_color: |-
-        {% if (states["sensor.non_ecole"].state == 'Ouverte') -%} 
+        {% if (states["sensor.nom_ecole"].state == 'Ouverte') -%} 
           green 
         {%- else -%} 
           red 
         {%- endif %}
     - type: custom:button-card
-      entity: sensor.non_ecole
+      entity: sensor.nom_ecole
       name: École Val-Mauricie
       show_entity_picture: true
+      entity_picture: /local/images/tableau_ecole_ouverte.png
       show_icon: false
       show_name: false
       size: 100
       state:
-        - value: Ouverte
-          entity_picture: /local/images/tableau_ecole_ouverte.png
         - value: Fermée
-          entity_picture: /local/images/tableau_ecole_fermee.png
+          entity_picture: /local/images/tableau_ecole_fermeee.png
       tap_action:
         action: none
       hold_action:
@@ -38,28 +37,21 @@
         action: none
     - type: markdown
       content: >-
-        ## {{ states('sensor.non_ecole') }}
 
+        ## {{ states('sensor.nom_ecole') }}
 
-        {% if state_attr('sensor.non_ecole', 'message') | trim
+        {% if state_attr('sensor.nom_ecole', 'message') | trim !=
+        '' or state_attr('sensor.nom_ecole', 'information') | trim
+        != '' -%}
 
-        != '' or state_attr('sensor.non_ecole', 'information') | trim !=
-        ''
-
-        -%}
-
-
-        {% if state_attr('sensor.non_ecole', 'message') -%}
+        {% if state_attr('sensor.nom_ecole', 'message') -%}
            ### Informations<br>
-         * {{ state_attr('sensor.non_ecole', 'message') }}
+         * {{ state_attr('sensor.nom_ecole', 'message') }}
         {% endif -%}
 
-
-        {% for name in state_attr('sensor.non_ecole',
-
+        {% for name in state_attr('sensor.nom_ecole',
         'information')-%}
           * {{ name }}
         {% endfor -%}
-
 
         {% endif -%}
