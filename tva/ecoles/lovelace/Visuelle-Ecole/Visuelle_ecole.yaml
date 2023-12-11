@@ -22,13 +22,13 @@
       entity: sensor.nom_ecole
       name: École Val-Mauricie
       show_entity_picture: true
-      entity_picture: /local/images/ecole_fermee.png
+      entity_picture: /local/images/ecole_ouverte.png
       show_icon: false
       show_name: false
       size: 100
       state:
-        - value: Ouverte
-          entity_picture: /local/images/ecole_ouverte.png
+        - value: Fermée
+          entity_picture: /local/images/ecole_fermeee.png
       tap_action:
         action: none
       hold_action:
@@ -43,7 +43,6 @@
         {% if state_attr('sensor.nom_ecole', 'message') | trim !=
         '' or state_attr('sensor.nom_ecole', 'information') | trim
         != '' -%}
-
 
         {% if state_attr('sensor.nom_ecole', 'message') -%}
            ### Informations<br>
