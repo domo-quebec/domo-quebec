@@ -6,14 +6,14 @@ Ce dépôt a pour but de documenter l'accès à différentes ressources d'intér
 
 | Plateforme | Description | État |
 |-|-|-|
-| CAA | Prix Essence | Fonctionnel |
-| Hydro-Québec | Données Ouvertes | Fonctionnel |
-| MELCCFP | Indice de la qualité de l'air | Fonctionnel |
-| MSP | Fil multirisque | En cours |
-| MSSS | Occupation Urgences | En cours |
-| MTQ | Caméras | Fonctionnel |
-| Sopfeu | Indice de danger d'incendie et feux actifs | Fonctionnel |
-| TVA | Fermeture des écoles | Fonctionnel |
+| CAA | [Prix Essence](/caa/) | Fonctionnel |
+| Hydro-Québec | [Données Ouvertes](/hydro-quebec/) | Fonctionnel |
+| MELCCFP | [Indice de la qualité de l'air](/melccfp/) | Fonctionnel |
+| MSP | [Fil multirisque](/msp/) | En cours |
+| MSSS | [Occupation Urgences](/msss/) | En cours |
+| MTQ | [Caméras](/mtq/) | Fonctionnel |
+| Sopfeu | [Indice de danger d'incendie et feux actifs](/sopfeu/) | Fonctionnel |
+| TVA | [Fermeture des écoles](/tva/) | Fonctionnel |
 ## Contribution
 
 Si vous avez des idées d'autres sources de données d'intérêt n'hésitez pas à ouvrir un issue.
