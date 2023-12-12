@@ -1,0 +1,29 @@
+rest:
+  - resource: https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json
+    scan_interval: 3600 
+    ssl_cipher_list: intermediate
+    sensor:
+      - name: "Hydro-Québec production total"
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.total }}"
+        device_class: power
+        unit_of_measurement: "MW"
+      - name: "Hydro-Québec production hydraulique"
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.hydraulique }}"
+        device_class: power
+        unit_of_measurement: "MW"
+      - name: "Hydro-Québec production éolien"
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.eolien }}"
+        device_class: power
+        unit_of_measurement: "MW"
+      - name: "Hydro-Québec production autres"
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.autres }}"
+        device_class: power
+        unit_of_measurement: "MW"
+      - name: "Hydro-Québec production solaire"
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.solaire }}"
+        device_class: power
+        unit_of_measurement: "MW"
+      - name: "Hydro-Québec production thermique"
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.thermique }}"
+        device_class: power
+        unit_of_measurement: "MW"
