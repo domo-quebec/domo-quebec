@@ -1,3 +1,6 @@
+# Les configurations SOPFEU ont été migré vers un nouveau repo https://github.com/domo-quebec/sopfeu
+
+
 # SOPFEU
 
 La [SOPFEU](https://sopfeu.qc.ca) est un organisme de prévention des incendies qui offre un indice du danger d'incendie ainsi que les recommandations correspondantes à chaque niveau.
