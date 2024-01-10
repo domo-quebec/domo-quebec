@@ -121,6 +121,26 @@ entities:
         name: 48h
       - entity: sensor.msss_06_sacre_coeur_civieres_dms
         name: C-DMS
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_maisonneuve_rosemont_nom
+    name: Maisonneuve-Rosemont
+    icon: mdi:hospital-building
+    show_state: false
+    entities:
+      - entity: sensor.msss_06_maisonneuve_rosemont_patient
+        name: Patient
+      - entity: sensor.msss_06_maisonneuve_rosemont_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_maisonneuve_rosemont_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_dms
+        name: C-DMS
   - type: section
   - type: custom:multiple-entity-row
     entity: sensor.msss_06_cardiologie_nom
