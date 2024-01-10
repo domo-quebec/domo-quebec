@@ -18,6 +18,10 @@ header_line = lines[0]
 
 # Step 4: Remove leading space from the " Mise_a_jour" header
 header_line = header_line.replace(' Mise_a_jour', 'Mise_a_jour')
+# Step 4a: Remove Apostrophe and parenthesis from the "Heure_de_l'extraction_(image)" header
+header_line = header_line.replace("Heure_de_l'extraction_(image)", "Heure_de_lextraction_image")
+# Step 4b: Remove trailing space from the "Nombre_de_civieres_fonctionnelles " header
+header_line = header_line.replace('Nombre_de_civieres_fonctionnelles ', 'Nombre_de_civieres_fonctionnelles')
 lines[0] = header_line
 
 # Read the CSV data
