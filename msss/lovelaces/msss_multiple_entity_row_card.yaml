@@ -1,1 +1,324 @@
-
+type: entities
+title: Hopitaux - Urgences
+entities:
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_99_mise_a_jour
+    name: Update
+    icon: mdi:update
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_99_mise_a_jour
+        name: Mise à jour
+      - entity: sensor.msss_99_extraction
+        name: U+2668
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_13_cite_nom
+    name: Cité-Santé
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_13_cite_patient
+        name: Patient
+      - entity: sensor.msss_13_cite_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_13_cite_patient_dms
+        name: DMS
+      - entity: sensor.msss_13_cite_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_13_cite_civieres_24h
+        name: 24h
+      - entity: sensor.msss_13_cite_civieres_48h
+        name: 48h
+      - entity: sensor.msss_13_cite_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_15_st_eustache_nom
+    name: St-Eustache
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_15_st_eustache_patient
+        name: Patient
+      - entity: sensor.msss_15_st_eustache_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_15_st_eustache_patient_dms
+        name: DMS
+      - entity: sensor.msss_15_st_eustache_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_15_st_eustache_civieres_24h
+        name: 24h
+      - entity: sensor.msss_15_st_eustache_civieres_48h
+        name: 48h
+      - entity: sensor.msss_15_st_eustache_civieres_dms
+        name: C-DMS
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_15_st_jerome_nom
+    name: St-Jerome
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_15_st_jerome_patient
+        name: Patient
+      - entity: sensor.msss_15_st_jerome_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_15_st_jerome_patient_dms
+        name: DMS
+      - entity: sensor.msss_15_st_jerome_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_15_st_jerome_civieres_24h
+        name: 24h
+      - entity: sensor.msss_15_st_jerome_civieres_48h
+        name: 48h
+      - entity: sensor.msss_15_st_jerome_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_chum_nom
+    name: CHUM
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_chum_patient
+        name: Patient
+      - entity: sensor.msss_06_chum_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_chum_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_chum_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_chum_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_chum_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_chum_civieres_dms
+        name: C-DMS
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_sacre_coeur_nom
+    name: Sacré-Coeur
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_sacre_coeur_patient
+        name: Patient
+      - entity: sensor.msss_06_sacre_coeur_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_sacre_coeur_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_sacre_coeur_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_sacre_coeur_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_sacre_coeur_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_sacre_coeur_civieres_dms
+        name: C-DMS
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_maisonneuve_rosemont_nom
+    name: Maisonneuve-Rosemont
+    icon: mdi:hospital-building
+    show_state: false
+    entities:
+      - entity: sensor.msss_06_maisonneuve_rosemont_patient
+        name: Patient
+      - entity: sensor.msss_06_maisonneuve_rosemont_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_maisonneuve_rosemont_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_maisonneuve_rosemont_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_cardiologie_nom
+    name: Cardiologie
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_cardiologie_patient
+        name: Patient
+      - entity: sensor.msss_06_cardiologie_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_cardiologie_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_cardiologie_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_cardiologie_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_cardiologie_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_cardiologie_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_cusm_nom
+    name: CUSM
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_cusm_patient
+        name: Patient
+      - entity: sensor.msss_06_cusm_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_cusm_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_cusm_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_cusm_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_cusm_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_cusm_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_royalvic_nom
+    name: Royal-Vic
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_royalvic_patient
+        name: Patient
+      - entity: sensor.msss_06_royalvic_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_royalvic_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_royalvic_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_royalvic_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_royalvic_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_royalvic_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_juif_nom
+    name: Juif
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_juif_patient
+        name: Patient
+      - entity: sensor.msss_06_juif_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_juif_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_juif_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_juif_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_juif_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_juif_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_justine_nom
+    name: Ste-Justine
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_justine_patient
+        name: Patient
+      - entity: sensor.msss_06_justine_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_justine_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_justine_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_justine_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_justine_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_justine_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_06_children_nom
+    name: Children
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_06_children_patient
+        name: Patient
+      - entity: sensor.msss_06_children_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_06_children_patient_dms
+        name: DMS
+      - entity: sensor.msss_06_children_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_06_children_civieres_24h
+        name: 24h
+      - entity: sensor.msss_06_children_civieres_48h
+        name: 48h
+      - entity: sensor.msss_06_children_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_14_gardeur_nom
+    name: Pierre Le Gardeur
+    icon: mdi:hospital-building
+    show_state: false
+    secondary_info: last-changed
+    entities:
+      - entity: sensor.msss_14_gardeur_patient
+        name: Patient
+      - entity: sensor.msss_14_gardeur_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_14_gardeur_patient_dms
+        name: DMS
+      - entity: sensor.msss_14_gardeur_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_14_gardeur_civieres_24h
+        name: 24h
+      - entity: sensor.msss_14_gardeur_civieres_48h
+        name: 48h
+      - entity: sensor.msss_14_gardeur_civieres_dms
+        name: C-DMS
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_99_region
+    name: Ensemble du Québec
+    icon: mdi:heart
+    show_state: false
+  - type: section
+  - type: custom:multiple-entity-row
+    entity: sensor.msss_99_nom
+    name: Province
+    icon: mdi:hospital-building
+    show_state: false
+    entities:
+      - entity: sensor.msss_99_patient
+        name: Patient
+      - entity: sensor.msss_99_patient_pec
+        name: X-PEC
+      - entity: sensor.msss_99_patient_dms
+        name: DMS
+      - entity: sensor.msss_99_civieres_occupees
+        name: Civ
+      - entity: sensor.msss_99_civieres_24h
+        name: 24h
+      - entity: sensor.msss_99_civieres_48h
+        name: 48h
+      - entity: sensor.msss_99_civieres_dms
+        name: C-DMS
