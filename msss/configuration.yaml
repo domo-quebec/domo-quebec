@@ -1,0 +1,222 @@
+# Extraction du MSSS - Etat occupation des urgences
+command_line:
+  - sensor:
+      name: MSSS Etat occupation des urgences
+      unique_id: MSSS_urgences_data
+      value_template: '{{ value_json.99.Mise_a_jour | as_datetime | as_local }}'
+      device_class: timestamp
+      command: 'python3 /config/python_scripts/getmsssdata.py'
+      json_attributes:
+      - "06"
+      - "13"
+      - "14"
+      - "15"
+      - "99"
+      scan_interval: 3600
+
+# Definition des senseurs pour donnees du MSSS de certaines regions
+template:
+  - sensor:
+    - name: msss_99_region
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Region }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_nom
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Nom_installation }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_patient
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Nombre_total_de_patients_presents_a_lurgence }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_patient_pec
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Nombre_total_de_patients_en_attente_de_PEC }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_patient_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].DMS_ambulatoire_horaire }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_mise_a_jour
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Mise_a_jour }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_extraction
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Heure_de_lextraction_image }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_civieres_occupees
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Nombre_de_civieres_occupees }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_civieres_24h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Nombre_de_patients_sur_civiere_plus_de_24_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_civieres_48h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].Nombre_de_patients_sur_civiere_plus_de_48_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_99_civieres_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') [0].DMS_sur_civiere | round(2) }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '99') is not none }}"
+  - sensor:
+    - name: msss_13_cite_region
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Region }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_nom
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Nom_installation }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_patient
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Nombre_total_de_patients_presents_a_lurgence }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_patient_pec
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Nombre_total_de_patients_en_attente_de_PEC }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_patient_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].DMS_ambulatoire_horaire }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_mise_a_jour
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Mise_a_jour }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_civieres_occupees
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Nombre_de_civieres_occupees }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_civieres_24h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Nombre_de_patients_sur_civiere_plus_de_24_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_civieres_48h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].Nombre_de_patients_sur_civiere_plus_de_48_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_13_cite_civieres_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') [1].DMS_sur_civiere }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '13') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_region
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Region }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_nom
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Nom_installation }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_patient
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Nombre_total_de_patients_presents_a_lurgence }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_patient_pec
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Nombre_total_de_patients_en_attente_de_PEC }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_patient_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].DMS_ambulatoire_horaire }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_mise_a_jour
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Mise_a_jour }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_civieres_occupees
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Nombre_de_civieres_occupees }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_civieres_24h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Nombre_de_patients_sur_civiere_plus_de_24_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_civieres_48h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].Nombre_de_patients_sur_civiere_plus_de_48_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_14_gardeur_civieres_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') [1].DMS_sur_civiere }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '14') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_region
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Region }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_nom
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Nom_installation }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_patient
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Nombre_total_de_patients_presents_a_lurgence }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_patient_pec
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Nombre_total_de_patients_en_attente_de_PEC }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_patient_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].DMS_ambulatoire_horaire }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_mise_a_jour
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Mise_a_jour }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_civieres_occupees
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Nombre_de_civieres_occupees }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_civieres_24h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Nombre_de_patients_sur_civiere_plus_de_24_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_civieres_48h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].Nombre_de_patients_sur_civiere_plus_de_48_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_15_st_eustache_civieres_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') [3].DMS_sur_civiere }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '15') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_region
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Region }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_nom
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Nom_installation }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_patient
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Nombre_total_de_patients_presents_a_lurgence }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_patient_pec
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Nombre_total_de_patients_en_attente_de_PEC }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_patient_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].DMS_ambulatoire_horaire }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_mise_a_jour
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Mise_a_jour }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_civieres_occupees
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Nombre_de_civieres_occupees }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_civieres_24h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Nombre_de_patients_sur_civiere_plus_de_24_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_civieres_48h
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].Nombre_de_patients_sur_civiere_plus_de_48_heures }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
+  - sensor:
+    - name: msss_06_sacre_coeur_civieres_dms
+      state: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') [1].DMS_sur_civiere }}"
+      availability: "{{ state_attr('sensor.msss_etat_occupation_des_urgences', '06') is not none }}"
