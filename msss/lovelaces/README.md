@@ -84,9 +84,13 @@ entities:
 
 **Exemple d'une carte de type multiple-entity-row**
 
-X-PEC signifi : Non Prise en Charge
-
-C-DMS signifi : Durée moyenne du séjour sur civière.
+- **Patient** indique : Nombre de patient à l'urgence
+- **X-PEC** indique : Patient non Prise En Charge
+- **DMS** indique : Durée moyenne du séjour à l'urgence.
+- **Civ** indique : Nombre de civières à l'urgence.
+- **24h** indique : Nombre de patient sur civière depuis 24 heures.
+- **48h** indique : Nombre de patient sur civière depuis 24 heures.
+- **C-DM** S indique : Durée Moyenne du Séjour sur civière.
 
 
   ![Exemple d'un multiple-entity-row](MSSS-Multiple_entity_row.jpg)
