@@ -9,7 +9,7 @@ Ce répertoire inclut une première carte pour afficher les données du ministè
 
 - Installer [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row) depuis le HACS.
 - Au préalable, vous devrez ajouter les sensors pour les établissements que vous voulez suivre dans le fichier de configuration **configuration.yaml**.
-- Copier le contenu du fichier [msss_multiple_entity_row_card.yaml](msss_multiple_entity_row_card.yaml) dans une carte de votre Dashboard via le bouton "SHOW CODE EDITOR". Ajuster le contenu selon les entités que vous avez créées précédemment.
+- Copier le contenu du fichier [msss_multiple_entity_row_card.yaml](msss_multiple_entity_row_card.yaml) dans une carte de votre Dashboard via le bouton "SHOW CODE EDITOR". Ajuster le contenu selon les sensors que vous avez créées précédemment.
 
   ![Exemple de l'ajout d'un multiple-entity-row](MSSS-Multiple_entity_row-EDIT.jpg)
 
@@ -83,5 +83,10 @@ entities:
 ```
 
 **Exemple d'une carte de type multiple-entity-row**
+
+X-PEC signifi : Non Prise en Charge
+
+C-DMS signifi : Durée moyenne du séjour sur civière.
+
 
   ![Exemple d'un multiple-entity-row](MSSS-Multiple_entity_row.jpg)
