@@ -6,6 +6,8 @@ Ce dépôt a pour but de documenter l'accès à différentes ressources d'intér
 
 Si vous avez des idées d'autres sources de données d'intérêt n'hésitez pas à ouvrir un issue ou faire un pull request.
 
+Veuillez utiliser le dossier [00-modele](/00-modele/) comme base pour la structure de votre intégration.
+
 Les nouvelles sources de données sont ajoutées à ce dépôt git. Lorsque l'intégration est stable et jugée complete elle pourra être déplacée vers un dépôt indépendant.
 
 
