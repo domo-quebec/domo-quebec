@@ -1,0 +1,48 @@
+scrape:
+  - resource: https://pannes.hydroquebec.com/pannes/bilan-interruptions-service/
+    scan_interval: 600
+    sensor:
+      - name: "Hydro-Québec Interruptions - Québec"
+        unique_id: hydro-quebec-pannes-qc
+        icon: mdi:transmission-tower-off
+        select: td.main-value
+        attribute: "data-value"
+        value_template: '{{ value | regex_replace("^[^0-9]","") | int }}'
+      - name: "Hydro-Québec Clients privés d'électricité - Québec"
+        icon: mdi:transmission-tower-off
+        unique_id: hydro-quebec-pannes-clients-qc
+        select: .standard > tfoot:nth-child(4) > tr:nth-child(1) > td:nth-child(3)
+        attribute: "data-value"
+        value_template: '{{ value | regex_replace("^1|[^0-9]","") | int }}'
+
+
+  # Configuration avancée!!
+  # Vous devez aller chercher le CSS selector pour le tableau de la région et remplacer le 'select', le URL de 'resource'
+  # et les autres valeurs pour correspondre à votre emplacement
+  # - resource: https://pannes.hydroquebec.com/pannes/bilan-interruptions-service/laurentides.html
+  #   scan_interval: 600
+  #   sensor:
+  #     - name: "Hydro-Québec Interruptions - Pays-d'en-haut"
+  #       unique_id: hydro-quebec-pannes-pdh
+  #       icon: mdi:transmission-tower-off
+  #       select: .standard > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)
+  #       attribute: "data-value"
+  #       value_template: '{{ value | regex_replace("^[^0-9]","") | int}}'
+  #     - name: "Hydro-Québec Clients privés d'électricité - Pays-d'en-haut"
+  #       unique_id: hydro-quebec-pannes-clients-pdh
+  #       icon: mdi:transmission-tower-off
+  #       select: .standard > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(3)
+  #       attribute: "data-value"
+  #       value_template: '{{ value | regex_replace("^1|[^0-9]","") | int}}'
+  #     - name: "Hydro-Québec Interruptions - Laurentides"
+  #       unique_id: hydro-quebec-pannes-laurentides
+  #       icon: mdi:transmission-tower-off
+  #       select: td.main-value
+  #       attribute: "data-value"
+  #       value_template: '{{ value | regex_replace("^[^0-9]","") | int}}'
+  #     - name: "Hydro-Québec Clients privés d'électricité - Laurentides"
+  #       unique_id: hydro-quebec-pannes-clients-laurentides
+  #       icon: mdi:transmission-tower-off
+  #       select: .standard > tfoot:nth-child(3) > tr:nth-child(1) > td:nth-child(3)
+  #       attribute: "data-value"
+  #       value_template: '{{ value | regex_replace("^1|[^0-9]","") | int}}'

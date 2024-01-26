@@ -1,0 +1,13 @@
+sensor:
+  - platform: rest
+    resource: "https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/demande.json"
+    name: Hydro-Québec - Demande de puissance réseau
+    unique_id: hydro_quebec_demande_puissance_total
+    icon: mdi:transmission-tower-export
+    unit_of_measurement: MW
+    device_class: power
+    state_class: measurement
+    ssl_cipher_list: intermediate
+    value_template: >
+      {% set index =  value_json.indexDonneePlusRecent %}
+      {{ value_json.details[index]["valeurs"]["demandeTotal"] }}
