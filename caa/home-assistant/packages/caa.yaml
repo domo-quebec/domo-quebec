@@ -15,29 +15,29 @@ command_line:
 template:
   - sensor:
     - name: "CAA Prix Essence Montréal Aujourd'hui"
-      unique_id: caa_gas_today_montreal
+      unique_id: caa_gas_today_REGION
       icon: >
-        {% if state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "up"  %}
+        {% if state_attr('sensor.caa_prix_essence_data', 'arrow')['REGION'] == "up"  %}
           mdi:arrow-up
-        {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "equal"  %}
+        {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['REGION'] == "equal"  %}
           mdi:equal
-        {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "down"  %}
+        {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['REGION'] == "down"  %}
           mdi:arrow-down
         {% endif %}
       device_class: monetary
       unit_of_measurement: "CAD/l"
       state: >
-        {% set val = state_attr('sensor.caa_prix_essence_data', 'today')['MONTREAL'] | float / 100 %}
+        {% set val = state_attr('sensor.caa_prix_essence_data', 'today')['REGION'] | float / 100 %}
         {{ val | round(3) }}
       attributes:
         attribution: Données fournies par CAA Québec
         arrow: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'arrow')['REGION'] }}
         yesterday: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'yesterday')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'yesterday')['REGION'] }}
         last_week: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'last_week')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'last_week')['REGION'] }}
         last_month: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'last_month')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'last_month')['REGION'] }}
         last_year: >
-          {{ state_attr('sensor.caa_prix_essence_data', 'last_year')['MONTREAL'] }}
+          {{ state_attr('sensor.caa_prix_essence_data', 'last_year')['REGION'] }}
