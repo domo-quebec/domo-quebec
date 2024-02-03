@@ -1,0 +1,780 @@
+{
+  "dateStart" : "2024-02-02T00:00:00",
+  "dateEnd" : "2024-02-04T00:00:00",
+  "recentHour" : "2024-02-03T00:15:00",
+  "indexDonneePlusRecent" : 97,
+  "nbDateAvecData" : 98,
+  "details" : [ {
+    "date" : "2024-02-02T00:00:00",
+    "valeurs" : {
+      "demandeTotal" : 24491.0
+    }
+  }, {
+    "date" : "2024-02-02T00:15:00",
+    "valeurs" : {
+      "demandeTotal" : 24401.0
+    }
+  }, {
+    "date" : "2024-02-02T00:30:00",
+    "valeurs" : {
+      "demandeTotal" : 24268.0
+    }
+  }, {
+    "date" : "2024-02-02T00:45:00",
+    "valeurs" : {
+      "demandeTotal" : 24071.0
+    }
+  }, {
+    "date" : "2024-02-02T01:00:00",
+    "valeurs" : {
+      "demandeTotal" : 24097.0
+    }
+  }, {
+    "date" : "2024-02-02T01:15:00",
+    "valeurs" : {
+      "demandeTotal" : 24074.0
+    }
+  }, {
+    "date" : "2024-02-02T01:30:00",
+    "valeurs" : {
+      "demandeTotal" : 24076.0
+    }
+  }, {
+    "date" : "2024-02-02T01:45:00",
+    "valeurs" : {
+      "demandeTotal" : 23938.0
+    }
+  }, {
+    "date" : "2024-02-02T02:00:00",
+    "valeurs" : {
+      "demandeTotal" : 23687.0
+    }
+  }, {
+    "date" : "2024-02-02T02:15:00",
+    "valeurs" : {
+      "demandeTotal" : 23905.0
+    }
+  }, {
+    "date" : "2024-02-02T02:30:00",
+    "valeurs" : {
+      "demandeTotal" : 23954.0
+    }
+  }, {
+    "date" : "2024-02-02T02:45:00",
+    "valeurs" : {
+      "demandeTotal" : 23939.0
+    }
+  }, {
+    "date" : "2024-02-02T03:00:00",
+    "valeurs" : {
+      "demandeTotal" : 23936.0
+    }
+  }, {
+    "date" : "2024-02-02T03:15:00",
+    "valeurs" : {
+      "demandeTotal" : 23881.0
+    }
+  }, {
+    "date" : "2024-02-02T03:30:00",
+    "valeurs" : {
+      "demandeTotal" : 24019.0
+    }
+  }, {
+    "date" : "2024-02-02T03:45:00",
+    "valeurs" : {
+      "demandeTotal" : 23912.0
+    }
+  }, {
+    "date" : "2024-02-02T04:00:00",
+    "valeurs" : {
+      "demandeTotal" : 23953.0
+    }
+  }, {
+    "date" : "2024-02-02T04:15:00",
+    "valeurs" : {
+      "demandeTotal" : 24162.0
+    }
+  }, {
+    "date" : "2024-02-02T04:30:00",
+    "valeurs" : {
+      "demandeTotal" : 24369.0
+    }
+  }, {
+    "date" : "2024-02-02T04:45:00",
+    "valeurs" : {
+      "demandeTotal" : 24450.0
+    }
+  }, {
+    "date" : "2024-02-02T05:00:00",
+    "valeurs" : {
+      "demandeTotal" : 24536.0
+    }
+  }, {
+    "date" : "2024-02-02T05:15:00",
+    "valeurs" : {
+      "demandeTotal" : 25138.0
+    }
+  }, {
+    "date" : "2024-02-02T05:30:00",
+    "valeurs" : {
+      "demandeTotal" : 25320.0
+    }
+  }, {
+    "date" : "2024-02-02T05:45:00",
+    "valeurs" : {
+      "demandeTotal" : 25769.0
+    }
+  }, {
+    "date" : "2024-02-02T06:00:00",
+    "valeurs" : {
+      "demandeTotal" : 26117.0
+    }
+  }, {
+    "date" : "2024-02-02T06:15:00",
+    "valeurs" : {
+      "demandeTotal" : 26831.0
+    }
+  }, {
+    "date" : "2024-02-02T06:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27187.0
+    }
+  }, {
+    "date" : "2024-02-02T06:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27702.0
+    }
+  }, {
+    "date" : "2024-02-02T07:00:00",
+    "valeurs" : {
+      "demandeTotal" : 28134.0
+    }
+  }, {
+    "date" : "2024-02-02T07:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28499.0
+    }
+  }, {
+    "date" : "2024-02-02T07:30:00",
+    "valeurs" : {
+      "demandeTotal" : 28607.0
+    }
+  }, {
+    "date" : "2024-02-02T07:45:00",
+    "valeurs" : {
+      "demandeTotal" : 28884.0
+    }
+  }, {
+    "date" : "2024-02-02T08:00:00",
+    "valeurs" : {
+      "demandeTotal" : 29008.0
+    }
+  }, {
+    "date" : "2024-02-02T08:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28912.0
+    }
+  }, {
+    "date" : "2024-02-02T08:30:00",
+    "valeurs" : {
+      "demandeTotal" : 28993.0
+    }
+  }, {
+    "date" : "2024-02-02T08:45:00",
+    "valeurs" : {
+      "demandeTotal" : 28781.0
+    }
+  }, {
+    "date" : "2024-02-02T09:00:00",
+    "valeurs" : {
+      "demandeTotal" : 28893.0
+    }
+  }, {
+    "date" : "2024-02-02T09:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28707.0
+    }
+  }, {
+    "date" : "2024-02-02T09:30:00",
+    "valeurs" : {
+      "demandeTotal" : 28542.0
+    }
+  }, {
+    "date" : "2024-02-02T09:45:00",
+    "valeurs" : {
+      "demandeTotal" : 28206.0
+    }
+  }, {
+    "date" : "2024-02-02T10:00:00",
+    "valeurs" : {
+      "demandeTotal" : 28021.0
+    }
+  }, {
+    "date" : "2024-02-02T10:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28139.0
+    }
+  }, {
+    "date" : "2024-02-02T10:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27964.0
+    }
+  }, {
+    "date" : "2024-02-02T10:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27777.0
+    }
+  }, {
+    "date" : "2024-02-02T11:00:00",
+    "valeurs" : {
+      "demandeTotal" : 27624.0
+    }
+  }, {
+    "date" : "2024-02-02T11:15:00",
+    "valeurs" : {
+      "demandeTotal" : 27634.0
+    }
+  }, {
+    "date" : "2024-02-02T11:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27586.0
+    }
+  }, {
+    "date" : "2024-02-02T11:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27880.0
+    }
+  }, {
+    "date" : "2024-02-02T12:00:00",
+    "valeurs" : {
+      "demandeTotal" : 27837.0
+    }
+  }, {
+    "date" : "2024-02-02T12:15:00",
+    "valeurs" : {
+      "demandeTotal" : 27787.0
+    }
+  }, {
+    "date" : "2024-02-02T12:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27455.0
+    }
+  }, {
+    "date" : "2024-02-02T12:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27223.0
+    }
+  }, {
+    "date" : "2024-02-02T13:00:00",
+    "valeurs" : {
+      "demandeTotal" : 27412.0
+    }
+  }, {
+    "date" : "2024-02-02T13:15:00",
+    "valeurs" : {
+      "demandeTotal" : 27383.0
+    }
+  }, {
+    "date" : "2024-02-02T13:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27295.0
+    }
+  }, {
+    "date" : "2024-02-02T13:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27124.0
+    }
+  }, {
+    "date" : "2024-02-02T14:00:00",
+    "valeurs" : {
+      "demandeTotal" : 27032.0
+    }
+  }, {
+    "date" : "2024-02-02T14:15:00",
+    "valeurs" : {
+      "demandeTotal" : 27203.0
+    }
+  }, {
+    "date" : "2024-02-02T14:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27472.0
+    }
+  }, {
+    "date" : "2024-02-02T14:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27536.0
+    }
+  }, {
+    "date" : "2024-02-02T15:00:00",
+    "valeurs" : {
+      "demandeTotal" : 27345.0
+    }
+  }, {
+    "date" : "2024-02-02T15:15:00",
+    "valeurs" : {
+      "demandeTotal" : 27640.0
+    }
+  }, {
+    "date" : "2024-02-02T15:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27767.0
+    }
+  }, {
+    "date" : "2024-02-02T15:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27969.0
+    }
+  }, {
+    "date" : "2024-02-02T16:00:00",
+    "valeurs" : {
+      "demandeTotal" : 28042.0
+    }
+  }, {
+    "date" : "2024-02-02T16:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28256.0
+    }
+  }, {
+    "date" : "2024-02-02T16:30:00",
+    "valeurs" : {
+      "demandeTotal" : 28478.0
+    }
+  }, {
+    "date" : "2024-02-02T16:45:00",
+    "valeurs" : {
+      "demandeTotal" : 29002.0
+    }
+  }, {
+    "date" : "2024-02-02T17:00:00",
+    "valeurs" : {
+      "demandeTotal" : 29333.0
+    }
+  }, {
+    "date" : "2024-02-02T17:15:00",
+    "valeurs" : {
+      "demandeTotal" : 29563.0
+    }
+  }, {
+    "date" : "2024-02-02T17:30:00",
+    "valeurs" : {
+      "demandeTotal" : 29681.0
+    }
+  }, {
+    "date" : "2024-02-02T17:45:00",
+    "valeurs" : {
+      "demandeTotal" : 29702.0
+    }
+  }, {
+    "date" : "2024-02-02T18:00:00",
+    "valeurs" : {
+      "demandeTotal" : 29595.0
+    }
+  }, {
+    "date" : "2024-02-02T18:15:00",
+    "valeurs" : {
+      "demandeTotal" : 29703.0
+    }
+  }, {
+    "date" : "2024-02-02T18:30:00",
+    "valeurs" : {
+      "demandeTotal" : 29548.0
+    }
+  }, {
+    "date" : "2024-02-02T18:45:00",
+    "valeurs" : {
+      "demandeTotal" : 29111.0
+    }
+  }, {
+    "date" : "2024-02-02T19:00:00",
+    "valeurs" : {
+      "demandeTotal" : 29083.0
+    }
+  }, {
+    "date" : "2024-02-02T19:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28869.0
+    }
+  }, {
+    "date" : "2024-02-02T19:30:00",
+    "valeurs" : {
+      "demandeTotal" : 28709.0
+    }
+  }, {
+    "date" : "2024-02-02T19:45:00",
+    "valeurs" : {
+      "demandeTotal" : 28674.0
+    }
+  }, {
+    "date" : "2024-02-02T20:00:00",
+    "valeurs" : {
+      "demandeTotal" : 28624.0
+    }
+  }, {
+    "date" : "2024-02-02T20:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28374.0
+    }
+  }, {
+    "date" : "2024-02-02T20:30:00",
+    "valeurs" : {
+      "demandeTotal" : 28219.0
+    }
+  }, {
+    "date" : "2024-02-02T20:45:00",
+    "valeurs" : {
+      "demandeTotal" : 28211.0
+    }
+  }, {
+    "date" : "2024-02-02T21:00:00",
+    "valeurs" : {
+      "demandeTotal" : 28118.0
+    }
+  }, {
+    "date" : "2024-02-02T21:15:00",
+    "valeurs" : {
+      "demandeTotal" : 28020.0
+    }
+  }, {
+    "date" : "2024-02-02T21:30:00",
+    "valeurs" : {
+      "demandeTotal" : 27840.0
+    }
+  }, {
+    "date" : "2024-02-02T21:45:00",
+    "valeurs" : {
+      "demandeTotal" : 27394.0
+    }
+  }, {
+    "date" : "2024-02-02T22:00:00",
+    "valeurs" : {
+      "demandeTotal" : 27313.0
+    }
+  }, {
+    "date" : "2024-02-02T22:15:00",
+    "valeurs" : {
+      "demandeTotal" : 27092.0
+    }
+  }, {
+    "date" : "2024-02-02T22:30:00",
+    "valeurs" : {
+      "demandeTotal" : 26826.0
+    }
+  }, {
+    "date" : "2024-02-02T22:45:00",
+    "valeurs" : {
+      "demandeTotal" : 26684.0
+    }
+  }, {
+    "date" : "2024-02-02T23:00:00",
+    "valeurs" : {
+      "demandeTotal" : 26416.0
+    }
+  }, {
+    "date" : "2024-02-02T23:15:00",
+    "valeurs" : {
+      "demandeTotal" : 26295.0
+    }
+  }, {
+    "date" : "2024-02-02T23:30:00",
+    "valeurs" : {
+      "demandeTotal" : 26030.0
+    }
+  }, {
+    "date" : "2024-02-02T23:45:00",
+    "valeurs" : {
+      "demandeTotal" : 25969.0
+    }
+  }, {
+    "date" : "2024-02-03T00:00:00",
+    "valeurs" : {
+      "demandeTotal" : 25850.0
+    }
+  }, {
+    "date" : "2024-02-03T00:15:00",
+    "valeurs" : {
+      "demandeTotal" : 25899.0
+    }
+  }, {
+    "date" : "2024-02-03T00:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T00:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T01:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T01:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T01:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T01:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T02:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T02:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T02:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T02:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T03:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T03:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T03:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T03:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T04:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T04:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T04:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T04:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T05:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T05:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T05:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T05:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T06:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T06:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T06:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T06:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T07:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T07:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T07:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T07:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T08:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T08:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T08:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T08:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T09:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T09:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T09:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T09:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T10:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T10:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T10:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T10:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T11:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T11:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T11:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T11:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T12:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T12:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T12:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T12:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T13:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T13:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T13:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T13:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T14:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T14:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T14:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T14:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T15:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T15:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T15:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T15:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T16:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T16:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T16:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T16:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T17:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T17:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T17:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T17:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T18:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T18:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T18:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T18:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T19:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T19:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T19:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T19:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T20:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T20:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T20:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T20:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T21:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T21:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T21:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T21:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T22:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T22:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T22:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T22:45:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T23:00:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T23:15:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T23:30:00",
+    "valeurs" : { }
+  }, {
+    "date" : "2024-02-03T23:45:00",
+    "valeurs" : { }
+  } ]
+}
