@@ -1,32 +1,35 @@
 rest:
   - resource: https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json
-    name: Hydro-Québec - Production
-    icon: transmission-tower-import
-    unique_id: hydro_quebec_production
     scan_interval: 3600
     ssl_cipher_list: intermediate
     sensor:
       - name: "Hydro-Québec production total"
+        icon: transmission-tower-import
         value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.total }}"
         device_class: power
         unit_of_measurement: "MW"
       - name: "Hydro-Québec production hydraulique"
+        icon: transmission-tower-import
         value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.hydraulique }}"
         device_class: power
         unit_of_measurement: "MW"
       - name: "Hydro-Québec production éolien"
+        icon: transmission-tower-import
         value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.eolien }}"
         device_class: power
         unit_of_measurement: "MW"
       - name: "Hydro-Québec production autres"
+        icon: transmission-tower-import
         value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.autres }}"
         device_class: power
         unit_of_measurement: "MW"
       - name: "Hydro-Québec production solaire"
+        icon: transmission-tower-import
         value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.solaire }}"
         device_class: power
         unit_of_measurement: "MW"
       - name: "Hydro-Québec production thermique"
+        icon: transmission-tower-import
         value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.thermique }}"
         device_class: power
         unit_of_measurement: "MW"
