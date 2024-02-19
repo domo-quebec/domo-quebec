@@ -1,6 +1,5 @@
-sensor:
-  - platform: rest
-    resource: https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json
+rest:
+  - resource: https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json
     name: Hydro-Québec - Production
     icon: transmission-tower-import
     unique_id: hydro_quebec_production
