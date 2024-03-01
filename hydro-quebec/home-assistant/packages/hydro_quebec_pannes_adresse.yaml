@@ -1,0 +1,18 @@
+# Obtenir le lieuConsommation ici : 
+# https://infopannes.solutions.hydroquebec.com/statut-adresse/valider-adresse (Faire F12 et chercher lieux-conso dans NETWORK)
+# example : https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso?codePostal=H7T%201C7&numeroAppartement=&numeroCivique=3003&nomRue=Boul%20Le%20Carrefour
+# "lieuConsommation":"0504706679"
+# ETAT : A - Électricité présente
+#        N - Pas d'électricité
+
+rest:
+  # Info-Pannes
+  - resource: https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso/etats/##NUMERO_LIEU_CONSOMMATION##
+    scan_interval: 60
+
+    sensor:
+      - name: ##NOM_DU_LIEU_CONSOMMATION##
+        json_attributes_path: "$.[0]"
+        json_attributes:
+          - etat
+        value_template: "{{ value_json[0].etat }}"  
