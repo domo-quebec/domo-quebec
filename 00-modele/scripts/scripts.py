@@ -1,1 +1,1 @@
-print("Je suis un scypts python.")
+print("Je suis un script python.")
