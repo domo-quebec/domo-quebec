@@ -1,35 +1,27 @@
 # CAA
 
-**En développement, bienvenu aux contributions**
-
-## Extractions des données
+## Données
 Le CAA publie le prix de l'essence par région sur son site [https://www.caa.ca/fr/prix-de-lessence/](https://www.caa.ca/fr/prix-de-lessence/)
 
 Il est possible d'extraire ces données en format json avec la commande suivante: `curl -s --request POST "https://www.caa.ca/wp/wp-admin/admin-ajax.php" --form action=getCitiesForDropdown --form caa_dropdown=QUEBEC`
 
 ## Installation
 
-### Capteurs
+### Home-Assistant
 
-Les valeurs du fichier [configuration.yaml](configuration.yaml) doivent être ajoutées à votre configuration. Prenez soin d'ajuster les valeurs afin de refléter la région pour laquelle vous voulez les données. Attention, les majuscules doivent être respectées.
+Les configurations Home-Assistant du projet Domo-Québec s'installent sous forme de ["package" Home-Assistant](https://www.home-assistant.io/docs/configuration/packages/). Pour faire l'activation de la fonctionnalitée créé un dossier nommé "packages" à la racine de votre dossier de configuratio Home-Assistant et ajoutez la configuration suivante à votre fichier `configuration.yaml`
 
-L'icon varie selon la variation du prix pour désactiver le changement d'icon, seulement remplacée :
+```yaml
+homeassistant:
+  packages: !include_dir_named packages
+```
 
-   ```
-   icon: >
-          {% if state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "up"  %}
-            mdi:arrow-up
-          {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "equal"  %}
-            mdi:equal
-          {% elif state_attr('sensor.caa_prix_essence_data', 'arrow')['MONTREAL'] == "down"  %}
-            mdi:arrow-down
-          {% endif %}
-   ```
-        
-        
-par : ```icon: mdi:gas-station```
+Le dossier [home-assistant/packages](home-assistant/packages) contient un fichier nommé `caa.yaml` qui doit être déplacé dans le dossier "packages" de votre installation Home-Assistant.
 
-Les exemples utilisent la région de Montréal, les autres régions possibles jusqu'à maintenant sont inscrites dans le tableau ci-bas.
+#### Configuration
+
+Dans le fichier `caa.yaml`, remplacer `VILLE` par votre ville disponible dans le tableau ci-bas.
+
 
 | Ville disponibles|
 |-------|
@@ -63,6 +55,10 @@ Les exemples utilisent la région de Montréal, les autres régions possibles ju
 | VAL-D'OR |
 | VAUDREUIL-DORION |
 
+#### Cartes Lovelace
+Un exemple de carte lovelace est disponible dans le dossier [home-assistant/lovelaces](home-assistant/lovelaces)
+
+
 ## TODO
 
-- Dashboard lovelace
+- Ajouter Bruno
