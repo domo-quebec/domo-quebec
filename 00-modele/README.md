@@ -48,7 +48,7 @@ homeassistant:
 
 Le dossier [home-assistant/packages](home-assistant/packages) contient un fichier nommé `sopfeu.yaml` qui doit être déplacé dans le dossier "packages" de votre installation Home-Assistant.
 
-Ensuite, si un scipts est requis, le scripts doit etre placé a la racine du projet : [scripts/scrypts.py](donnees/scripts/scrypts.py) sous le répertoire `scripts/`.
+Ensuite, si un scipts est requis, le scripts doit etre placé a la racine du projet : [scripts/scripts.py](donnees/scripts/scripts.py) sous le répertoire `scripts/`.
 
 #### Configuration
 
