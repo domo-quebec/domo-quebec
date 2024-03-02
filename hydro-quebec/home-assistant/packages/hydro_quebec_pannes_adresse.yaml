@@ -15,4 +15,11 @@ rest:
         json_attributes_path: "$.[0]"
         json_attributes:
           - etat
-        value_template: "{{ value_json[0].etat }}"  
+        value_template: >-
+          {% if value_json[0].etat == 'A' %}
+            powered
+          {% elif value_json[0].etat == 'N' %}
+            outage
+          {% else %}   
+            unknown
+          {% endif %}
