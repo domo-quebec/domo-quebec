@@ -16,7 +16,13 @@ Merci riceandpasta#2144 sur le [Discord](https://discord.gg/BTPDntfaXH) du proje
 
 ### Production électrique
 
-Les données des sources d'électricité d'Hydro-Québec sont disponibles [https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json](https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json). Il est important de savoir que les données ont un [décalage](https://www.hydroquebec.com/documents-donnees/donnees-ouvertes/production-electricite-quebec/).
+Les données des sources d'électricité d'Hydro-Québec sont disponibles [https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json](https://www.hydroquebec.com/data/documents-donnees/donnees-ouvertes/json/production.json). Il est important de savoir que les données ont un [décalage](https://www.hydroquebec.com/documents-donnees/donnees-ouvertes/production-electricite-quebec/). 
+
+### Info-panne
+
+L'info-panne d'Hydro-Québec est disponible à l'adresse suivante ``https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso/etats/##LOCATION##``
+Les détails de la configuration sont disponible ici : [Configuration_info-panne](configuration_info-panne.md)
+
 
 ## Autres configurations d'intérêt
 

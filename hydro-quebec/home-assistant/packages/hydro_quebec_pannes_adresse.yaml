@@ -7,7 +7,7 @@
 
 rest:
   # Info-Pannes
-  - resource: https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso/etats/##LOCATION##
+  - resource: https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso/etats/LOCATION
     scan_interval: 60
     sensor:
       - name: Info-pannes_LOCATION
