@@ -1,0 +1,359 @@
+{
+  "dateStart" : "2024-02-02T00:00:00",
+  "dateEnd" : "2024-02-04T00:00:00",
+  "recentHour" : "2024-02-02T22:30:00",
+  "indexDonneePlusRecent" : 22,
+  "nbDateAvecData" : 23,
+  "details" : [ {
+    "date" : "2024-02-02T00:30:00",
+    "valeurs" : {
+      "total" : 23217.0,
+      "hydraulique" : 22003.0,
+      "eolien" : 647.0,
+      "autres" : 567.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T01:30:00",
+    "valeurs" : {
+      "total" : 23015.0,
+      "hydraulique" : 21783.0,
+      "eolien" : 669.0,
+      "autres" : 563.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T02:30:00",
+    "valeurs" : {
+      "total" : 22804.0,
+      "hydraulique" : 21610.0,
+      "eolien" : 629.0,
+      "autres" : 565.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T03:30:00",
+    "valeurs" : {
+      "total" : 22797.0,
+      "hydraulique" : 21677.0,
+      "eolien" : 556.0,
+      "autres" : 564.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T04:30:00",
+    "valeurs" : {
+      "total" : 23274.0,
+      "hydraulique" : 22116.0,
+      "eolien" : 595.0,
+      "autres" : 563.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T05:30:00",
+    "valeurs" : {
+      "total" : 24332.0,
+      "hydraulique" : 23141.0,
+      "eolien" : 628.0,
+      "autres" : 563.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T06:30:00",
+    "valeurs" : {
+      "total" : 26306.0,
+      "hydraulique" : 25108.0,
+      "eolien" : 634.0,
+      "autres" : 564.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T07:30:00",
+    "valeurs" : {
+      "total" : 28275.0,
+      "hydraulique" : 27097.0,
+      "eolien" : 614.0,
+      "autres" : 564.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T08:30:00",
+    "valeurs" : {
+      "total" : 28367.0,
+      "hydraulique" : 27183.0,
+      "eolien" : 619.0,
+      "autres" : 565.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T09:30:00",
+    "valeurs" : {
+      "total" : 27785.0,
+      "hydraulique" : 26664.0,
+      "eolien" : 554.0,
+      "autres" : 566.0,
+      "solaire" : 1.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T10:30:00",
+    "valeurs" : {
+      "total" : 27325.0,
+      "hydraulique" : 26166.0,
+      "eolien" : 587.0,
+      "autres" : 570.0,
+      "solaire" : 2.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T11:30:00",
+    "valeurs" : {
+      "total" : 26556.0,
+      "hydraulique" : 25350.0,
+      "eolien" : 638.0,
+      "autres" : 566.0,
+      "solaire" : 2.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T12:30:00",
+    "valeurs" : {
+      "total" : 26551.0,
+      "hydraulique" : 25309.0,
+      "eolien" : 674.0,
+      "autres" : 567.0,
+      "solaire" : 1.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T13:30:00",
+    "valeurs" : {
+      "total" : 26493.0,
+      "hydraulique" : 25295.0,
+      "eolien" : 625.0,
+      "autres" : 572.0,
+      "solaire" : 1.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T14:30:00",
+    "valeurs" : {
+      "total" : 26504.0,
+      "hydraulique" : 25348.0,
+      "eolien" : 583.0,
+      "autres" : 572.0,
+      "solaire" : 1.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T15:30:00",
+    "valeurs" : {
+      "total" : 26787.0,
+      "hydraulique" : 25692.0,
+      "eolien" : 523.0,
+      "autres" : 571.0,
+      "solaire" : 1.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T16:30:00",
+    "valeurs" : {
+      "total" : 27582.0,
+      "hydraulique" : 26427.0,
+      "eolien" : 583.0,
+      "autres" : 572.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T17:30:00",
+    "valeurs" : {
+      "total" : 29508.0,
+      "hydraulique" : 28344.0,
+      "eolien" : 592.0,
+      "autres" : 572.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T18:30:00",
+    "valeurs" : {
+      "total" : 29908.0,
+      "hydraulique" : 28814.0,
+      "eolien" : 518.0,
+      "autres" : 576.0,
+      "solaire" : 0.0,
+      "thermique" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T19:30:00",
+    "valeurs" : {
+      "total" : 28568.0,
+      "hydraulique" : 27528.0,
+      "eolien" : 464.0,
+      "autres" : 576.0,
+      "solaire" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T20:30:00",
+    "valeurs" : {
+      "total" : 27476.0,
+      "hydraulique" : 26496.0,
+      "eolien" : 401.0,
+      "autres" : 579.0,
+      "solaire" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T21:30:00",
+    "valeurs" : {
+      "total" : 26992.0,
+      "hydraulique" : 26047.0,
+      "eolien" : 368.0,
+      "autres" : 577.0,
+      "solaire" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T22:30:00",
+    "valeurs" : {
+      "total" : 26052.0,
+      "hydraulique" : 25160.0,
+      "eolien" : 315.0,
+      "autres" : 577.0,
+      "solaire" : 0.0
+    }
+  }, {
+    "date" : "2024-02-02T23:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T00:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T01:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T02:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T03:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T04:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T05:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T06:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T07:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T08:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T09:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T10:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T11:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T12:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T13:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T14:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T15:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T16:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T17:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T18:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T19:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T20:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T21:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T22:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  }, {
+    "date" : "2024-02-03T23:30:00",
+    "valeurs" : {
+      "total" : 0.0
+    }
+  } ]
+}
