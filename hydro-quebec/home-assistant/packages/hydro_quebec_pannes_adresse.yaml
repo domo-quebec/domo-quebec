@@ -1,0 +1,133 @@
+# Obtenir le lieuConsommation ici : 
+# https://infopannes.solutions.hydroquebec.com/statut-adresse/valider-adresse (Faire F12 et chercher lieux-conso dans NETWORK)
+# example : https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso?codePostal=H7T%201C7&numeroAppartement=&numeroCivique=3003&nomRue=Boul%20Le%20Carrefour
+# "lieuConsommation":"0504706679"
+# ETAT : A - Électricité présente
+#        N - Pas d'électricité
+
+rest:
+  # Info-Pannes
+  - resource: https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso/etats/LOCATION
+    scan_interval: 60
+    sensor:
+      - name: Info-pannes_LOCATION
+        unique_id: InfoPanne_data_LOCATION
+        json_attributes_path: "$.[0].interruptions[0]"
+        json_attributes:
+          - dateDebut
+          - codeIntervention
+          - niveauUrgence
+          - nbClient
+          - dateFinEstimeeMin
+          - dateFinEstimeeMax
+          - interruptionPlanifiee
+        value_template: >-
+          {% if value_json[0].etat == 'A' %}
+            powered
+          {% elif value_json[0].etat == 'N' %}
+            outage
+          {% else %}   
+            unknown
+          {% endif %}
+
+template:
+  sensor:
+    - name: "Info panne LOCATION state"
+      state: >
+        {% set code_intervention = states.sensor.info_pannes_LOCATION.attributes.codeIntervention %}
+        {% if code_intervention == "N" or code_intervention == "A" %}
+          {{ "Évaluation des travaux requis" }}
+        {% elif code_intervention == "L" %}
+          {{ "Travaux en cours" }}
+        {% elif code_intervention == "R" %}
+          {{ "Équipe désignée" }}
+        {% else %}
+          {{ "Aucune panne" }}
+        {% endif %}
+      attributes:
+        Niveau: >
+          {% set niveau = states.sensor.info_pannes_LOCATION.attributes.niveauUrgence %}
+          {% if niveau == "P" %}
+            {{ "Panne" }}
+          {% elif niveau == "N" %}
+            {{ "Panne majeur" }}
+          {% else %}
+            {{ "Unknown" }}
+          {% endif %}
+        Clients: >
+          {% set clients = states.sensor.info_pannes_LOCATION.attributes.nbClient %}
+          {{ clients }}
+
+    - name: "Info-panne LOCATION début"
+      state: >
+        {% if states.sensor.info_pannes_LOCATION.state != 'unavailable' %}
+          {% set dateDebut = states.sensor.info_pannes_LOCATION.attributes.dateDebut %}
+          {% if dateDebut is defined and dateDebut != 'unknown' %}
+            {{ as_timestamp(dateDebut) | timestamp_custom('%Y-%m-%d %H:%M:%S') }}
+          {% else %}
+            Aucune panne
+          {% endif %}
+        {% else %}
+          Indisponible
+        {% endif %}
+
+    - name: "Info-panne LOCATION date de fin minimum"
+      state: >
+        {% if states.sensor.info_pannes_LOCATION.state != 'unavailable' %}
+          {% set dateFinEstimeeMin = states.sensor.info_pannes_LOCATION.attributes.dateFinEstimeeMin %}
+          {% if dateFinEstimeeMin is defined and dateFinEstimeeMin != 'unknown' %}
+            {{ as_timestamp(dateFinEstimeeMin) | timestamp_custom('%Y-%m-%d %H:%M:%S') }}
+          {% else %}
+            Aucune panne
+          {% endif %}
+        {% else %}
+          Indisponible
+        {% endif %}
+
+    - name: "Info-panne LOCATION date de fin maximum"
+      state: >
+        {% if states.sensor.info_pannes_LOCATION.state != 'unavailable' %}
+          {% set dateFinEstimeeMax = states.sensor.info_pannes_LOCATION.attributes.dateFinEstimeeMax %}
+          {% if dateFinEstimeeMax is defined and dateFinEstimeeMax != 'unknown' %}
+            {{ as_timestamp(dateFinEstimeeMax) | timestamp_custom('%Y-%m-%d %H:%M:%S') }}
+          {% else %}
+            Aucune panne
+          {% endif %}
+        {% else %}
+          Indisponible
+        {% endif %}
+
+    - name: "Info-panne LOCATION durée"
+      unit_of_measurement: "hours"
+      state: >
+        {% if states.sensor.info_pannes_LOCATION.state != 'unavailable' %}
+          {% set start_date_str = states.sensor.info_pannes_LOCATION.attributes.dateDebut %}
+          {% if start_date_str is defined and start_date_str != 'unknown' %}
+            {% set start_date = strptime(start_date_str, "%Y-%m-%dT%H:%M:%S.%f%z") %}
+            {% set current_date = now() %}
+            {% set outage_duration = (current_date - start_date).total_seconds() / 3600 %}
+            {{ outage_duration | round(2) }}
+          {% else %}
+            0
+          {% endif %}
+        {% else %}
+          Indisponible
+        {% endif %}
+
+    - name: "Info-panne LOCATION durée avant rétablissement"
+      unit_of_measurement: "hours"
+      state: >
+        {% if states.sensor.info_pannes_LOCATION.state != 'unavailable' %}
+          {% set current_time = as_timestamp(now()) %}
+          {% set target_time = states.sensor.info_pannes_LOCATION.attributes.dateFinEstimeeMax %}
+          {% if target_time is defined and target_time != 'unknown' %}
+            {% set target_time = as_timestamp(target_time) %}
+            {% set remaining_time_seconds = target_time - current_time %}
+            {% set remaining_time_hours = remaining_time_seconds / 3600 %}
+            {{ remaining_time_hours | round(1) }}
+          {% else %}
+            0
+          {% endif %}
+        {% else %}
+          N/A
+        {% endif %}
