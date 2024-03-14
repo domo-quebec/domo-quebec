@@ -1,0 +1,16 @@
+multiscrape:
+  - name: HA scraper
+    resource: https://www.cehq.gouv.qc.ca/suivihydro/fichier_donnees.asp?NoStation=##NUMERO_DE_LA_STATION##
+    scan_interval: 900
+    sensor:
+      - name: ##NOM_DE_LA_STATION##
+        select: "p"
+        unit_of_measurement: m
+        state_class: measurement
+        device_class: water
+        value_template: >
+          {% set lines = value.split("\n") %}
+          {% set fields = lines[2].split() %}
+            {% if fields|length == 3 %}
+              {{ fields[2].replace(",", ".") }}
+            {% endif %}
