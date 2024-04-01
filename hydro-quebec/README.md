@@ -40,7 +40,3 @@ homeassistant:
 ```
 
 Le dossier [home-assistant/packages](home-assistant/packages) contient des fichiers qui doivent être déplacés dans le dossier "packages" de votre installation Home-Assistant.
-
-#### Configuration
-
-Faites un "Rechercher et remplacer" dans le fichier `fermeture-ecoles.yaml` et remplacer les valeurs identifiées au début du fichier par les valeurs correspondantes.
