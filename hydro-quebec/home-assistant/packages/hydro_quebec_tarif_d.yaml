@@ -2,7 +2,7 @@
 
 # Le sensor sensor.entre_principale_wh est un lecteur de consomation en directe qui donne la valeur en Wh pour la journée en cours.
 
-# Tarif 1er avrill 2024
+# Tarif 1er avril 2024
 template:
   - sensor:
       - name: Hydro-Québec - Coût actuel D
