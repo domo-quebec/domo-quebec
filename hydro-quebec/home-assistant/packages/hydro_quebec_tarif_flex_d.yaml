@@ -16,11 +16,11 @@ template:
           {% set end_date = now().replace(year=year+1, month=4, day=1) %}
           {% if start_date <= today < end_date %}
             {% if states('sensor.hydroqc_maison_current_dpc_period_detail') in ("peak") %}
-               0.53526000
+               0.55132
             {% elif ((states('sensor.entre_principale_wh') | float)) < 40000 %}
-               0.04582000
+               0.04719
             {% elif ((states('sensor.entre_principale_wh') | float)) > 40000 %}
-               0.07880000
+               0.08116
             {% endif %}
           {% else %}
             {% if ((states('sensor.entre_principale_wh') | float)) < 40000 %}
