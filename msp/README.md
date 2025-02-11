@@ -4,8 +4,10 @@
 
 ## Convertisseur RSS vers JSON
 
-Le fichier msp-geojson-parser.py permet d'extraire le [fil RSS Multi-Risque](https://www.donneesquebec.ca/recherche/dataset/carte-vigilance-multirisque-fil
+Le fichier msp-parser.py permet d'extraire le [fil RSS Multi-Risque](https://www.donneesquebec.ca/recherche/dataset/carte-vigilance-multirisque-fil
 ) du Ministère de la sécurité publique et le converti au format json.
+
+Ce JSON peut par la suite être intégré à Home-Assistant en utilisant les configurations du dossier [home-assistant](/msp/home-assistant/)
 
 ## Convertisseur Geojson
 
@@ -13,7 +15,6 @@ Le MSP fourni un fichier Geojson avec des coordonéees aui format ESPG:32198. Le
 
 
 
-## TODO
 
-- Ajouter des exemples de sensors Home-Assistant
-- Ajouter un exemple de carte lovelace
+
+

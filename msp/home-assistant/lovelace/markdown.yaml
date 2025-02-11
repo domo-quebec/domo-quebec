@@ -1,0 +1,41 @@
+type: markdown
+content: >-
+  {% from 'availability_template.jinja' import avail %}
+
+  {% set available = avail(['binary_sensor.alerte_msp_montreal']) | bool %}
+
+  {% if available %}
+
+  {% set alerts =
+  states.binary_sensor.alerte_msp_montreal.attributes.alertes %}
+
+  {% for alert in alerts -%}
+
+  {% set updated = state_attr('binary_sensor.alerte_msp_montreal','updated')
+  -%}
+       **{{ alert.title }}**
+       <i><sub>{{ alert.description.Auteur }}</sub></i>
+       <i><sub>MÀJ: {{ as_datetime(updated).strftime('%Y-%m-%d %H:%M') }}</sub></i>
+  <details>
+
+  <summary>Détails</summary>
+
+  <b>Type</b>: {{ alert.description.Type }}<br>
+
+  <b>Sévérite</b>: {{ alert.description.Sévérite }}<br>
+
+  <b>Certitude</b>: {{ alert.description.Certitude }}<br>
+
+  <b>Urgence</b>: {{ alert.description.Urgence }}<br>
+
+  <p>{{ alert.description.Description }}</p>
+
+  </details>
+
+  {% endfor -%}
+
+  {% endif %}
+visibility:
+  - condition: state
+    entity: binary_sensor.alerte_msp_montreal
+    state: "on"

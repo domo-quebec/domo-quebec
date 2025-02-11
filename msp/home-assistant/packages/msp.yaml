@@ -1,0 +1,102 @@
+command_line:
+  - sensor:
+      name: MSP Fil multi-risque Data
+      unique_id: msp_multirisque_data
+      scan_interval: 300
+      value_template: "{{ value_json.publication_date }}"
+      json_attributes:
+        - alerts
+        - publication_date
+      command: |-
+        python /config/scripts/msp-parser.py
+
+template:
+  - binary_sensor:
+      - name: "Alerte MSP - Montréal"
+        unique_id: msp_multirisque_montreal
+        state: >
+          {% set alerts = state_attr('sensor.msp_fil_multi_risque_data', 'alerts') | default([]) %}
+          {% set sector = "Montréal" %}
+          {% set activealert = 0 %}
+          {% set alertnum = namespace(count=0) %}
+          {% for alert in alerts %}
+            {% if alert.description is defined
+               and alert.description.Secteur is defined
+               and sector in alert.description.Secteur %}
+              {% set alertnum.count = alertnum.count + 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if alertnum.count > 0 %}
+            true
+          {% endif %}
+
+        attributes:
+          nombre: >
+            {% set alerts = state_attr('sensor.msp_fil_multi_risque_data', 'alerts') | default([]) %}
+            {% set sector = "Montréal" %}
+            {% set activealert = 0 %}
+            {% set alertnum = namespace(count=0) %}
+            {% for alert in alerts %}
+              {% if alert.description is defined
+                and alert.description.Secteur is defined
+                and sector in alert.description.Secteur %}
+                {% set alertnum.count = alertnum.count + 1 %}
+              {% endif %}
+            {% endfor %}
+            {{ alertnum.count }}
+          alertes: >
+            {% set alerts = state_attr('sensor.msp_fil_multi_risque_data', 'alerts') | default([]) %}
+            {% set sector = "Montréal" %}
+            {% for alert in alerts %}
+              {% if alert.description is defined
+                and alert.description.Secteur is defined
+                and sector in alert.description.Secteur %}
+                {{ alert }}
+              {% endif %}
+            {% endfor %}
+          updated: >
+            {{ state_attr('sensor.msp_fil_multi_risque_data', 'publication_date') }}
+  - binary_sensor:
+      - name: "Alerte MSP - Québec"
+        unique_id: msp_multirisque_quebec
+        state: >
+          {% set alerts = state_attr('sensor.msp_fil_multi_risque_data', 'alerts') | default([]) %}
+          {% set sector = "Québec" %}
+          {% set activealert = 0 %}
+          {% set alertnum = namespace(count=0) %}
+          {% for alert in alerts %}
+            {% if alert.description is defined
+               and alert.description.Secteur is defined
+               and sector in alert.description.Secteur %}
+              {% set alertnum.count = alertnum.count + 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if alertnum.count > 0 %}
+            true
+          {% endif %}
+        attributes:
+          nombre: >
+            {% set alerts = state_attr('sensor.msp_fil_multi_risque_data', 'alerts') | default([]) %}
+            {% set sector = "Québec" %}
+            {% set activealert = 0 %}
+            {% set alertnum = namespace(count=0) %}
+            {% for alert in alerts %}
+              {% if alert.description is defined
+                and alert.description.Secteur is defined
+                and sector in alert.description.Secteur %}
+                {% set alertnum.count = alertnum.count + 1 %}
+              {% endif %}
+            {% endfor %}
+            {{ alertnum.count }}
+          alertes: >
+            {% set alerts = state_attr('sensor.msp_fil_multi_risque_data', 'alerts') | default([]) %}
+            {% set sector = "Québec" %}
+            {% for alert in alerts %}
+              {% if alert.description is defined
+                and alert.description.Secteur is defined
+                and sector in alert.description.Secteur %}
+                {{ alert }}
+              {% endif %}
+            {% endfor %}
+          updated: >
+            {{ state_attr('sensor.msp_fil_multi_risque_data', 'publication_date') }}
