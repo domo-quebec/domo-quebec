@@ -22,6 +22,8 @@ Les nouvelles sources de données sont ajoutées à ce dépôt git. Lorsque l'in
 | MSP | [Fil multirisque](/msp/) | En cours |
 | MTQ | [Caméras](/mtq/) | Fonctionnel |
 
+Les données de qualité de l'air pour le territoire de la Ville de Montréal sont fournies par le Réseau de surveillance de la qualité de l'air (RSQA), qui offre un jeu de données ouvertes accessibles par [API](https://donnees.montreal.ca/dataset/rsqa-indice-qualite-air/resource/a25fdea2-7e86-42ac-8301-ca77db3ff17e). Installez l'intégration [Montreal AQI](https://github.com/normcyr/home-assistant-montreal-aqi) pour y avoir accès dans Home Assistant.
+
 ## TODO
 
 - Touver un moyen d'intégrer les données du fil multi-risque du MSP (feu, inondations, alertes météo, etc) [https://www.donneesquebec.ca/recherche/dataset/carte-vigilance-multirisque-fil](https://www.donneesquebec.ca/recherche/dataset/carte-vigilance-multirisque-fil)
