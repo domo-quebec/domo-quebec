@@ -20,6 +20,12 @@ Les données des sources d'électricité d'Hydro-Québec sont disponibles [https
 
 ### Info-panne
 
+#### Bilan des pannes par région
+
+Il est possible de créé des capteurs qui indique le nombre de panne en cours pour une région donnée. Un fichier de configuration est disponible ici [hydro-quebec/home-assistant/packages/hydro_quebec_pannes.yaml](hydro-quebec/home-assistant/packages/hydro_quebec_pannes.yaml)
+
+#### État des pannes pour un lieu spécifique
+
 L'info-panne d'Hydro-Québec est disponible à l'adresse suivante ``https://services-bs.solutions.hydroquebec.com/pan/web/api/v1/lieux-conso/etats/##LOCATION##``
 Les détails de la configuration sont disponible ici : [Configuration_info-panne](configuration_info-panne.md)
 
