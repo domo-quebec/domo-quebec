@@ -24,21 +24,20 @@ Le dossier [home-assistant/packages](home-assistant/packages) contient un fichie
 
 #### Configuration
 
-- Ajouter les sensors.
-  - Dans les sensors, changer le site pour celui qui correspond à votre région.
-  - Pour trouver votre site, allez sur la page suivante. https://www.iqa.environnement.gouv.qc.ca/contenu/index.asp#
-  - Cliquez sur votre région.
-  - Cliquez sur "Pour obtenir un historique récent des composantes de l'IQA".
-  - Votre site est indiqué dans l'adresse web de la page. 
-    - Exemple: https://www.iqa.environnement.gouv.qc.ca/contenu/graph.asp?site=1803
-    - 1803 dans mon cas
+- Adapter la configuration des sensors dans le fichier `melccfp.yaml`:
+  - Dans la propriété `resource` du premier sensor, changer le numéro de station pour celui qui correspond à votre région.
+    - Pour trouver votre numéro de station, allez sur la page suivante: http://www.arcgis.com/apps/mapviewer/index.html?url=https://services3.arcgis.com/0lL78GhXbg1Po7WO/ArcGIS/rest/services/IQA_resultat_REST/FeatureServer&source=sd
+    - Cliquez sur la station voulue
+    - Prenez en note la valeur de `NO_STATION`
+  - Mettre à jour les valeurs des propriétés `name`, `unique_id` et `friendly_name` des deux sensors selon vos préférences
 
 Pour le lovelace :
 
 - Installer [Swiss Army Knife](https://swiss-army-knife-card-manual.amoebelabs.com/start/installation/).
 - Copier le template dans le répertoire /config/lovelace/sak_templates/templates/layouts/
 - Copier les images dans le répertoire /config/www/mes_images/
-- Copier melccfp.yaml
+- Copier `melccfp.yaml`
+- Mettre à jour les noms des sensors dans `melccfp.yaml` selon votre configuration
 
 
 ### Captures d'écran
