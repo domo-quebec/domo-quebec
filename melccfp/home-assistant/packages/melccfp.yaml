@@ -1,16 +1,27 @@
-scrape:
-  - resource: https://www.iqa.environnement.gouv.qc.ca/contenu/indice.asp?site=1803
-    sensor:
-      - name: "IQA text Shawinigan"
-        select: "b"
-        index: 1
+sensor:
+  - platform: rest
+    name: IQA numeric Shawinigan
+    unique_id: iqa_numeric_shawinigan
+    resource: https://services3.arcgis.com/0lL78GhXbg1Po7WO/ArcGIS/rest/services/IQA_resultat_REST/FeatureServer/0/query?where=NO_STATION=4130&outFields=NOM_STATION,IQA&f=pgeojson&returnGeometry=false
+    method: GET
+    headers:
+      Content-Type: application/json
+    value_template: "{{ value_json.features[0].properties.IQA }}"
     scan_interval: 1800
 
-  - resource: https://www.iqa.environnement.gouv.qc.ca/contenu/indice.asp?site=1803
-    sensor:
-      - name: "IQA numeric Shawinigan"
-        select: "img"
-        index: 3
-        attribute: src
-        value_template: '{{ value | regex_replace("[^0-9]","")}}'
-    scan_interval: 1800
+template:
+  sensors:
+    iqa_text_shawinigan:
+      unique_id: iqa_text_shawinigan
+      friendly_name: "IQA text Shawinigan"
+      value_template: >
+        {% set iqa = states('sensor.iqa_numeric_shawinigan') | float %}
+        {% if iqa >= 1 and iqa <= 25 %}
+          Bon
+        {% elif iqa >= 26 and iqa <= 50 %}
+          Acceptable
+        {% elif iqa >= 51 %}
+          Mauvais
+        {% else %}
+          Inconnu
+        {% endif %}
