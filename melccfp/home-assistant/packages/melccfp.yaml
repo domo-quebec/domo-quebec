@@ -7,7 +7,7 @@ sensor:
     headers:
       Content-Type: application/json
     value_template: "{{ value_json.features[0].properties.IQA }}"
-    scan_interval: 1800
+    scan_interval: 3600
 
 template:
   sensors:
@@ -25,3 +25,4 @@ template:
         {% else %}
           Inconnu
         {% endif %}
+
