@@ -29,3 +29,17 @@ template:
                0.10342
             {% endif %}
           {% endif %}
+  - sensor:
+      - name: "Hydro-Québec - Économies projetées Flex D"
+        unit_of_measurement: "$"
+        device_class: monetary
+        state_class: total
+        state: >
+          {% set savings = states('sensor.hydro_quebec_maison_net_saving_loss_vs_rate_d') | float(0) %}
+          {% set days = states('sensor.hydro_quebec_maison_number_of_winter_days') | int(0) %}
+          {% if days > 0 %}
+            {{ ((savings / days) * 120) | round(2) }}
+          {% else %}
+            0.00
+          {% endif %}
+
