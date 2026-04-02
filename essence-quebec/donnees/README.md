@@ -147,6 +147,7 @@ command_line:
 ```
 
 Pour utiliser le script Python avec Home Assistant:
+
 1. Copier le script `essence_extractor.py` dans un dossier accessible (ex: `/config/scripts/`)
 2. Adapter le chemin dans les commandes ci-dessus
 3. Vérifier les permissions de lecture/exécution
