@@ -1,4 +1,4 @@
-# Régie de l'Essence Québec
+# Régie Essence Québec
 
 Extraction et analyse du prix moyen de l'essence par région au Québec.
 
@@ -57,9 +57,15 @@ python scripts/essence_extractor.py
 
 **Options:**
 
-- `--region REGION`: Extrait les prix pour une région spécifique (ex: Montréal, Capitale-Nationale, Outaouais, etc.)
+- `--region REGION`: Région pour laquelle extraire les prix (ex: Montréal, Capitale-Nationale, etc.)
+- `--station STATION`: Nom de la station-service pour extraire les prix spécifiquement
+- `--gas-type TYPE`: Type de carburant à extraire (défaut: Régulier)
+  - Types disponibles: Régulier, Diesel, Super
 - `--output FILE`: Exporte les résultats en JSON
 - `--verbose`: Mode détaillé avec affichage des informations d'extraction
+- `--list-regions`: Liste toutes les régions administratives disponibles
+- `--list-stations`: Liste toutes les stations-services (optionnel: `--region` pour filtrer)
+- `--list-gas-types`: Liste tous les types de carburants disponibles
 
 **Exemples:**
 
@@ -67,14 +73,29 @@ python scripts/essence_extractor.py
 # Prix moyen pour tout le Québec
 python scripts/essence_extractor.py
 
-# Prix moyen pour la Capitale-Nationale
+# Prix moyen pour la Capitale-Nationale (carburant régulier par défaut)
 python scripts/essence_extractor.py --region "Capitale-Nationale"
 
-# Export en JSON
+# Prix moyen du Diesel à Montréal
+python scripts/essence_extractor.py --region "Montréal" --gas-type "Diesel"
+
+# Prix pour une station spécifique
+python scripts/essence_extractor.py --region "Montréal" --station "nom_station"
+
+# Exporter en JSON
 python scripts/essence_extractor.py --region "Capitale-Nationale" --output result.json
 
+# Lister les régions disponibles
+python scripts/essence_extractor.py --list-regions
+
+# Lister les stations à Montréal
+python scripts/essence_extractor.py --list-stations --region "Montréal"
+
+# Lister les types de carburants disponibles
+python scripts/essence_extractor.py --list-gas-types
+
 # Mode détaillé
-python scripts/essence_extractor.py --verbose
+python scripts/essence_extractor.py --region "Montréal" --verbose
 ```
 
 ## Régions disponibles
@@ -100,11 +121,18 @@ Les régions actuellement disponibles dans la source de données incluent:
 - Outaouais
 - Saguenay-Lac-Saint-Jean
 
+## Types de carburants disponibles
+
+- **Régulier** (essence ordinaire) - défaut
+- **Diesel**
+- **Super** (essence premium)
+
 ## Notes
 
 - Les prix sont exprimés en cents (¢) par litre
-- Seuls les prix du carburant régulier disponible sont inclus dans les calculs
-- Les données sont mises à jour régulièrement sur le site de la Régie de l'Essence Québec
+- Par défaut, seuls les prix de l'essence régulière disponible sont inclus dans les calculs
+- Les données sont mises à jour régulièrement sur le site de [Régie Essence Québec](https://regieessencequebec.ca/)
+- Utilisez `--list-regions`, `--list-stations`, et `--list-gas-types` pour découvrir les options disponibles
 
 ## Crédits
 
