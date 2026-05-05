@@ -149,12 +149,6 @@ Faites un "Rechercher et remplacer" dans le fichier `essence-quebec.yaml` et rem
 - `REGION` : La région pour laquelle extraire les prix (ex: Capitale-Nationale, Montréal, etc.) — voir la liste des [régions disponibles](#régions-disponibles)
 - `TYPE_CARBURANT` : Le type de carburant — voir la liste des [types de carburants disponibles](#types-de-carburants-disponibles)
 
-### Autres plateformes
-
-Si vous utilisez une autre plateforme qu'Home-Assistant et vous intégrez ces données, ce serait grandement apprécié que vous partagiez vos configurations pour les ajouter.
-
-Pour ajouter une plateforme, créez un dossier avec le nom de la plateforme à la racine et ajoutez les informations de configuration spécifiques.
-
 ## Notes
 
 - Les prix sont exprimés en cents (¢) par litre
