@@ -17,6 +17,7 @@ Les nouvelles sources de données sont ajoutées à ce dépôt git. Lorsque l'in
 |-|-|-|
 | CITAM | [Alertes Municipales](/citam/) | En cours |
 | CAA | [Prix Essence](/caa/) | Fonctionnel |
+| Essence Québec | [Prix Essence par Région](/essence-quebec/) | Fonctionnel |
 | Hydro-Québec | [Données Ouvertes](/hydro-quebec/) | Fonctionnel |
 | MELCCFP | [Indice de la qualité de l'air](/melccfp/) | Fonctionnel |
 | MSP | [Fil multirisque](/msp/) | En cours |

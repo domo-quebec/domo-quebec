@@ -4,32 +4,55 @@ rest:
     ssl_cipher_list: intermediate
     sensor:
       - name: "Hydro-Québec production total"
-        icon: transmission-tower-import
-        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.total }}"
+        unique_id: hydroquebec_production_total
+        icon: mdi:transmission-tower-import
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.total | default(0) }}"
         device_class: power
+        state_class: measurement
         unit_of_measurement: "MW"
+
       - name: "Hydro-Québec production hydraulique"
-        icon: transmission-tower-import
-        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.hydraulique }}"
+        unique_id: hydroquebec_production_hydraulique
+        icon: mdi:transmission-tower-import
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.hydraulique | default(0) }}"
         device_class: power
+        state_class: measurement
         unit_of_measurement: "MW"
+
       - name: "Hydro-Québec production éolien"
-        icon: transmission-tower-import
-        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.eolien }}"
+        unique_id: hydroquebec_production_eolien
+        icon: mdi:transmission-tower-import
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.eolien | default(0) }}"
         device_class: power
+        state_class: measurement
         unit_of_measurement: "MW"
+
       - name: "Hydro-Québec production autres"
-        icon: transmission-tower-import
-        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.autres }}"
+        unique_id: hydroquebec_production_autres
+        icon: mdi:transmission-tower-import
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.autres | default(0) }}"
         device_class: power
+        state_class: measurement
         unit_of_measurement: "MW"
+
       - name: "Hydro-Québec production solaire"
-        icon: transmission-tower-import
-        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.solaire }}"
+        unique_id: hydroquebec_production_solaire
+        icon: mdi:transmission-tower-import
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.solaire | default(0) }}"
         device_class: power
+        state_class: measurement
         unit_of_measurement: "MW"
+
       - name: "Hydro-Québec production thermique"
-        icon: transmission-tower-import
-        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.thermique }}"
+        unique_id: hydroquebec_production_thermique
+        icon: mdi:transmission-tower-import
+        value_template: "{{ value_json.details[value_json.indexDonneePlusRecent].valeurs.thermique | default(0) }}"
         device_class: power
+        state_class: measurement
         unit_of_measurement: "MW"
+
+      - name: "Hydro-Québec production dernière mise à jour"
+        unique_id: hydroquebec_production_derniere_maj
+        icon: mdi:clock-outline
+        value_template: "{{ as_datetime(value_json.details[value_json.indexDonneePlusRecent].date).replace(tzinfo=now().tzinfo).isoformat() }}"
+        device_class: timestamp
