@@ -1,0 +1,19 @@
+# Variables de configuration (Rechercher et remplacer):
+# REGION        : La région (ex: Capitale-Nationale, Montréal, Laurentides, etc.)
+# TYPE_CARBURANT: Le type de carburant (Régulier, Diesel, Super)
+
+command_line:
+  - sensor:
+      name: Essence Québec REGION Prix
+      unique_id: essence_quebec_REGION_prix
+      command: 'python3 /config/scripts/essence_extractor.py --region "REGION" --gas-type "TYPE_CARBURANT"'
+      value_template: "{{ value_json.average | round(1) }}"
+      json_attributes:
+        - region
+        - gas_type
+        - count
+        - min
+        - max
+      unit_of_measurement: "¢/L"
+      device_class: monetary
+      scan_interval: 3600

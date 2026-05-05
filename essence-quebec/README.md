@@ -127,6 +127,34 @@ Les régions actuellement disponibles dans la source de données incluent:
 - **Diesel**
 - **Super** (essence premium)
 
+## Installation
+
+### Home-Assistant
+
+Les configurations Home-Assistant du projet Domo-Québec s'installent sous forme de ["package" Home-Assistant](https://www.home-assistant.io/docs/configuration/packages/). Pour faire l'activation de la fonctionnalité, créez un dossier nommé "packages" à la racine de votre dossier de configuration Home-Assistant et ajoutez la configuration suivante à votre fichier `configuration.yaml`
+
+```yaml
+homeassistant:
+  packages: !include_dir_named packages
+```
+
+Le dossier [home-assistant/packages](home-assistant/packages) contient un fichier nommé `essence-quebec.yaml` qui doit être déplacé dans le dossier "packages" de votre installation Home-Assistant.
+
+Ensuite, le script [scripts/essence_extractor.py](scripts/essence_extractor.py) doit être placé sous le répertoire `scripts/` de votre installation Home-Assistant.
+
+#### Configuration
+
+Faites un "Rechercher et remplacer" dans le fichier `essence-quebec.yaml` et remplacez les valeurs identifiées au début du fichier par les valeurs correspondantes :
+
+- `REGION` : La région pour laquelle extraire les prix (ex: Capitale-Nationale, Montréal, etc.) — voir la liste des [régions disponibles](#régions-disponibles)
+- `TYPE_CARBURANT` : Le type de carburant — voir la liste des [types de carburants disponibles](#types-de-carburants-disponibles)
+
+### Autres plateformes
+
+Si vous utilisez une autre plateforme qu'Home-Assistant et vous intégrez ces données, ce serait grandement apprécié que vous partagiez vos configurations pour les ajouter.
+
+Pour ajouter une plateforme, créez un dossier avec le nom de la plateforme à la racine et ajoutez les informations de configuration spécifiques.
+
 ## Notes
 
 - Les prix sont exprimés en cents (¢) par litre
